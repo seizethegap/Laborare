@@ -1,0 +1,102 @@
+E:\Laborare\Laborare\Laborare\bin\Debug\Laborare.exe.config
+E:\Laborare\Laborare\Laborare\bin\Debug\Laborare.exe
+E:\Laborare\Laborare\Laborare\bin\Debug\Laborare.pdb
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare.csprojAssemblyReference.cache
+E:\Laborare\Laborare\Laborare\obj\Debug\App.g.cs
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare_MarkupCompile.cache
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare_MarkupCompile.lref
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare.g.resources
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare.Properties.Resources.resources
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare.csproj.GenerateResource.cache
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare.csproj.CoreCompileInputs.cache
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare.exe
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare.pdb
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\bin\Debug\Laborare.exe.config
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\bin\Debug\Laborare.exe
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\bin\Debug\Laborare.pdb
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare.csprojAssemblyReference.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Views\Diagnostics.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\App.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare_MarkupCompile.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare_MarkupCompile.lref
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Views\MainWindow.baml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Views\Diagnostics.baml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare.g.resources
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare.Properties.Resources.resources
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare.csproj.GenerateResource.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare.csproj.CoreCompileInputs.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare.exe
+C:\Users\Andrew N\Desktop\Laborare\Laborare\Laborare\obj\Debug\Laborare.pdb
+D:\Laborare\Laborare\Laborare\bin\Debug\Laborare.exe.config
+D:\Laborare\Laborare\Laborare\obj\Debug\Laborare.exe
+D:\Laborare\Laborare\Laborare\obj\Debug\Laborare.pdb
+D:\Laborare\Laborare\Laborare\bin\Debug\Laborare.exe
+D:\Laborare\Laborare\Laborare\bin\Debug\Laborare.pdb
+D:\Laborare\Laborare\Laborare\obj\Debug\App.g.cs
+D:\Laborare\Laborare\Laborare\obj\Debug\Laborare_MarkupCompile.cache
+D:\Laborare\Laborare\Laborare\obj\Debug\Laborare_MarkupCompile.lref
+D:\Laborare\Laborare\Laborare\obj\Debug\Laborare.g.resources
+D:\Laborare\Laborare\Laborare\obj\Debug\Laborare.Properties.Resources.resources
+D:\Laborare\Laborare\Laborare\obj\Debug\Laborare.csproj.GenerateResource.Cache
+D:\Laborare\Laborare\Laborare\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Laborare\Laborare\Laborare\bin\Debug\System.Windows.Interactivity.dll
+D:\Laborare\Laborare\Laborare\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Laborare\Laborare\Laborare\bin\Debug\System.Windows.Interactivity.xml
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\MainWindowView.g.cs
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\DiagnosticsView.g.cs
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\MainWindowView.baml
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\DiagnosticsView.baml
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\PasswordView.baml
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\PasswordView.g.cs
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\ConfigurationManagerView.baml
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\ConfigurationManagerView.g.cs
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\PasswordView.baml
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\ConfigurationManagerView.baml
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\MainWindowView.g.cs
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\DiagnosticsView.g.cs
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\PasswordView.g.cs
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\ConfigurationManagerView.g.cs
+E:\Laborare\Laborare\Laborare\bin\Debug\Microsoft.Expression.Interactions.dll
+E:\Laborare\Laborare\Laborare\bin\Debug\System.Windows.Interactivity.dll
+E:\Laborare\Laborare\Laborare\bin\Debug\Microsoft.Expression.Interactions.xml
+E:\Laborare\Laborare\Laborare\bin\Debug\System.Windows.Interactivity.xml
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\MainWindowView.baml
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\DiagnosticsView.baml
+E:\Laborare\Laborare\Laborare\obj\Debug\Laborare.csproj.CopyComplete
+D:\Laborare\Laborare\Laborare\obj\Debug\Laborare.csprojResolveAssemblyReference.cache
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\IOCheckView.g.cs
+E:\Laborare\Laborare\Laborare\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Laborare\Laborare\Laborare\obj\Debug\Views\IOCheckView.baml
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\IOCheckView.g.cs
+D:\Laborare\Laborare\Laborare\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Laborare\Laborare\Laborare\obj\Debug\Views\IOCheckView.baml
+D:\Laborare\Laborare - Forked\Laborare\bin\Debug\Laborare.exe.config
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.exe
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.pdb
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.csprojResolveAssemblyReference.cache
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\PasswordView.baml
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\ConfigurationManagerView.baml
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\MotorConfigurationView.baml
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\MainWindowView.g.cs
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\DiagnosticsView.g.cs
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\PasswordView.g.cs
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\ConfigurationManagerView.g.cs
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\IOCheckView.g.cs
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\MotorConfigurationView.g.cs
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\App.g.cs
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare_MarkupCompile.cache
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare_MarkupCompile.lref
+D:\Laborare\Laborare - Forked\Laborare\bin\Debug\Laborare.exe
+D:\Laborare\Laborare - Forked\Laborare\bin\Debug\Laborare.pdb
+D:\Laborare\Laborare - Forked\Laborare\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Laborare\Laborare - Forked\Laborare\bin\Debug\System.Windows.Interactivity.dll
+D:\Laborare\Laborare - Forked\Laborare\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Laborare\Laborare - Forked\Laborare\bin\Debug\System.Windows.Interactivity.xml
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\MainWindowView.baml
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\DiagnosticsView.baml
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\IOCheckView.baml
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.g.resources
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.Properties.Resources.resources
+D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.csproj.GenerateResource.Cache

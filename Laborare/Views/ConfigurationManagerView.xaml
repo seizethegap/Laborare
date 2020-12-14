@@ -1,0 +1,19 @@
+﻿<Window x:Class="Laborare.Views.ConfigurationManagerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Configuration Manager" Height="561" Width="585">
+    <Grid Background="#FFD8D8D8">
+        <ListBox HorizontalAlignment="Left" Height="397" Margin="67,60,0,0" VerticalAlignment="Top" Width="299"/>
+        <Button HorizontalAlignment="Left" Margin="420,60,0,0" VerticalAlignment="Top" Width="96" Height="52">
+            <TextBlock TextWrapping="Wrap" Text="Create New Configuration"/>
+        </Button>
+        
+        <Button HorizontalAlignment="Left" Margin="420,129,0,0" VerticalAlignment="Top" Width="96" Height="52">
+            <TextBlock TextWrapping="Wrap" Text="Load Selected Configuration"/>
+        </Button>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="441,466,0,0" VerticalAlignment="Top" Width="99" Height="37"/>
+
+
+
+    </Grid>
+</Window>
