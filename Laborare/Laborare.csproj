@@ -65,11 +65,11 @@
     <Compile Include="Commands\IOCommands\RestartIOServiceCommand.cs" />
     <Compile Include="Commands\IOCommands\VacuumCommands.cs" />
     <Compile Include="Commands\CommandProcessor\UIRobotCommandProcessor.cs" />
-    <Compile Include="Commands\ViewModelCommands\IOCheckCommands\ApplyIoBoardIntervalSettingCommand.cs" />
-    <Compile Include="Commands\ViewModelCommands\IOCheckCommands\ReloadIoBoardsCommand.cs" />
-    <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\HomeMotorCommand.cs" />
-    <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\DisableMotorCommand.cs" />
-    <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\EnableMotorCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\Akoustis_901_42\IOCheckCommands\ApplyIoBoardIntervalSettingCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\Akoustis_901_42\IOCheckCommands\ReloadIoBoardsCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\Akoustis_901_42\MotorConfigurationCommands\HomeMotorCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\Akoustis_901_42\MotorConfigurationCommands\DisableMotorCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\Akoustis_901_42\MotorConfigurationCommands\EnableMotorCommand.cs" />
     <Compile Include="Configuration\IOLegendConfig.cs" />
     <Compile Include="Configuration\IOLegendSignalCollection.cs" />
     <Compile Include="Configuration\IOLegendSignalElement.cs" />
@@ -95,25 +95,25 @@
     <Compile Include="Services\RS232ConnectionService.cs" />
     <Compile Include="Services\TCPConnectionService.cs" />
     <Compile Include="Services\ReadInputSignalService.cs" />
-    <Compile Include="ViewModels\MotorConfigurationViewModel.cs" />
-    <Compile Include="ViewModels\JobConfigurationViewModel.cs" />
-    <Compile Include="ViewModels\IOCheckViewModel.cs" />
-    <Compile Include="Views\DiagnosticsView.xaml.cs">
+    <Compile Include="ViewModels\Akoustis_901_42\MotorConfigurationViewModel.cs" />
+    <Compile Include="ViewModels\Akoustis_901_42\JobConfigurationViewModel.cs" />
+    <Compile Include="ViewModels\Akoustis_901_42\IOCheckViewModel.cs" />
+    <Compile Include="Views\Akoustis_901_42\DiagnosticsView.xaml.cs">
       <DependentUpon>DiagnosticsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PasswordView.xaml.cs">
+    <Compile Include="Views\Akoustis_901_42\PasswordView.xaml.cs">
       <DependentUpon>PasswordView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ConfigurationManagerView.xaml.cs">
+    <Compile Include="Views\Akoustis_901_42\ConfigurationManagerView.xaml.cs">
       <DependentUpon>ConfigurationManagerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\IOCheckView.xaml.cs">
+    <Compile Include="Views\Akoustis_901_42\IOCheckView.xaml.cs">
       <DependentUpon>IOCheckView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MotorConfigurationView.xaml.cs">
+    <Compile Include="Views\Akoustis_901_42\MotorConfigurationView.xaml.cs">
       <DependentUpon>MotorConfigurationView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\MainWindowView.xaml">
+    <Page Include="Views\Akoustis_901_42\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -131,27 +131,27 @@
     <Compile Include="Models\ZMotor.cs" />
     <Compile Include="Models\YMotor.cs" />
     <Compile Include="Models\XMotor.cs" />
-    <Compile Include="Views\MainWindowView.xaml.cs">
+    <Compile Include="Views\Akoustis_901_42\MainWindowView.xaml.cs">
       <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\DiagnosticsView.xaml">
+    <Page Include="Views\Akoustis_901_42\DiagnosticsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PasswordView.xaml">
+    <Page Include="Views\Akoustis_901_42\PasswordView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ConfigurationManagerView.xaml">
+    <Page Include="Views\Akoustis_901_42\ConfigurationManagerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\IOCheckView.xaml">
+    <Page Include="Views\Akoustis_901_42\IOCheckView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MotorConfigurationView.xaml">
+    <Page Include="Views\Akoustis_901_42\MotorConfigurationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

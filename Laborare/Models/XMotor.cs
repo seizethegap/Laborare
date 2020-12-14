@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Threading;
-
+    using System.Windows;
     using Laborare.Commands.CommandProcessor;
     using Laborare.Services;
 
@@ -19,7 +19,14 @@
             _Connection_Service = connection_service;
             _Command_Processor = command_processor;
 
-            CheckMotorStatus();
+            try
+            {
+                CheckMotorStatus();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("X Motor is not connected.");
+            }
 
             // our message decoder, this will read messages on the stream and update our properties as 
             // appropriate.

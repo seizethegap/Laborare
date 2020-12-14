@@ -100,3 +100,34 @@ D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Views\IOCheckView.baml
 D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.g.resources
 D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.Properties.Resources.resources
 D:\Laborare\Laborare - Forked\Laborare\obj\Debug\Laborare.csproj.GenerateResource.Cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare.csprojAssemblyReference.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\PasswordView.baml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\ConfigurationManagerView.baml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\IOCheckView.baml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\MotorConfigurationView.baml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\MainWindowView.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\DiagnosticsView.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\PasswordView.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\ConfigurationManagerView.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\IOCheckView.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\MotorConfigurationView.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\App.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare_MarkupCompile.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare_MarkupCompile.lref
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare.exe
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare.pdb
+C:\Users\Andrew N\Desktop\Laborare\Laborare\bin\Debug\Laborare.exe.config
+C:\Users\Andrew N\Desktop\Laborare\Laborare\bin\Debug\Laborare.exe
+C:\Users\Andrew N\Desktop\Laborare\Laborare\bin\Debug\Laborare.pdb
+C:\Users\Andrew N\Desktop\Laborare\Laborare\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Andrew N\Desktop\Laborare\Laborare\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Andrew N\Desktop\Laborare\Laborare\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\MainWindowView.baml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Views\Akoustis_901_42\DiagnosticsView.baml
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare.g.resources
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare.Properties.Resources.resources
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare.csproj.GenerateResource.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare.csproj.CoreCompileInputs.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare\obj\Debug\Laborare.csproj.CopyComplete

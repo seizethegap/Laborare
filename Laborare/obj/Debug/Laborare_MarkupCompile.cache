@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Andrew N\Desktop\Laborare\Laborare\App.xaml
-6172765049
+61205928842
 
-58-678500804
+56-912649848
 16-884898076
-Views\MainWindowView.xaml;Views\DiagnosticsView.xaml;Views\PasswordView.xaml;Views\ConfigurationManagerView.xaml;Views\IOCheckView.xaml;Views\MotorConfigurationView.xaml;
+Views\Akoustis_901_42\MainWindowView.xaml;Views\Akoustis_901_42\DiagnosticsView.xaml;Views\Akoustis_901_42\PasswordView.xaml;Views\Akoustis_901_42\ConfigurationManagerView.xaml;Views\Akoustis_901_42\IOCheckView.xaml;Views\Akoustis_901_42\MotorConfigurationView.xaml;
 
-True
+False
 

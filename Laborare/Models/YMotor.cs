@@ -6,6 +6,7 @@
     using System;
     using System.ComponentModel;
     using System.Threading;
+    using System.Windows;
 
     class YMotor : IAxisMotor, INotifyPropertyChanged
     {
@@ -18,7 +19,14 @@
             _Connection_Service = connection_service;
             _Command_Processor = command_processor;
 
-            CheckMotorStatus();
+            try
+            {
+                CheckMotorStatus();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Y Motor is not connected.");
+            }
 
             _MessageDecoderService = new MessageDecoderService(this);
         }
