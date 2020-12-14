@@ -19,6 +19,7 @@
             EnableMotorCommand = new EnableMotorCommand(this);
             DisableMotorCommand = new DisableMotorCommand(this);
             HomeMotorCommand = new HomeMotorCommand(this);
+            SetMaxDistanceToCurrentPositionCommand = new SetMaxDistanceToCurrentPositionCommand(this);
         }
 
         private string _SelectedMotor;
@@ -28,6 +29,8 @@
         private double _Position;
 
         private IAxisMotor _CurrentMotor;
+
+        private double _MaxDistance;
 
         public Dictionary<string, IAxisMotor> Motors
         {
@@ -92,6 +95,23 @@
             }
         }
 
+        public double MaxDistance
+        {
+            get
+            {
+                return _MaxDistance;
+            }
+            
+            set
+            {
+                if (value != _MaxDistance)
+                {
+                    _MaxDistance = value;
+                    OnPropertyChanged("MaxDistance");
+                }
+            }
+        }
+
         #endregion
 
         public ICommand EnableMotorCommand
@@ -112,6 +132,12 @@
             private set;
         }
 
+        public ICommand SetMaxDistanceToCurrentPositionCommand
+        {
+            get;
+            private set;
+        }
+
         public void EnableMotor()
         {
             _CurrentMotor.EnableMotor();
@@ -125,6 +151,12 @@
         public void HomeMotor()
         {
             _CurrentMotor.HomeMotor();
+        }
+
+        public void SetMaxDistanceToCurrentPosition()
+        {
+            _CurrentMotor.ReadEncoderPosition();
+            _CurrentMotor.MaxDistance = _CurrentMotor.Position;
         }
 
         public void SynchronizeMotorProperty()
@@ -150,6 +182,10 @@
 
                 case "Position":
                     Position = _CurrentMotor.Position;
+                    break;
+
+                case "MaxDistance":
+                    MaxDistance = _CurrentMotor.MaxDistance;
                     break;
             }
         }

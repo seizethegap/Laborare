@@ -21,14 +21,15 @@
                 <TextBox Height="23" Canvas.Left="158" TextWrapping="Wrap" Text="TextBox" Canvas.Top="149" Width="120"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Max Distance:" VerticalAlignment="Top" Canvas.Left="56" Canvas.Top="193"/>
                 <TextBox Height="23" Canvas.Left="158" TextWrapping="Wrap" Text="TextBox" Canvas.Top="190" Width="120"/>
-                <TextBlock Canvas.Left="41" TextWrapping="Wrap" Text="Current Position:" Canvas.Top="356"/>
                 <TextBlock Canvas.Left="245" TextWrapping="Wrap" Text="Home Status:" Canvas.Top="356"/>
                 <TextBlock Canvas.Left="430" TextWrapping="Wrap" Text="Motor Status:" Canvas.Top="356"/>
-                <Button Command="{Binding EnableMotorCommand}" Content="Enable Motor" Canvas.Left="357" Canvas.Top="71" Width="144" Height="38"/>
-                <Button Command="{Binding DisableMotorCommand}" Content="Disable Motor" Canvas.Left="357" Canvas.Top="130" Width="144" Height="38"/>
-                <Button Command="{Binding HomeMotorCommand}" Content="Home Motor" Canvas.Left="357" Canvas.Top="190" Width="144" Height="38"/>
+                <Button Command="{Binding EnableMotorCommand}" Content="Enable Motor" Canvas.Left="357" Canvas.Top="71" Width="84" Height="38"/>
+                <Button Command="{Binding DisableMotorCommand}" Content="Disable Motor" Canvas.Left="446" Canvas.Top="71" Width="84" Height="38"/>
+                <Button Command="{Binding HomeMotorCommand}" Content="Home Motor" Canvas.Left="357" Canvas.Top="125" Width="173" Height="38"/>
                 <TextBlock Canvas.Left="441" TextWrapping="Wrap" Text="{Binding MotorStatus}" Canvas.Top="377"/>
-                <TextBlock Canvas.Left="56" TextWrapping="Wrap" Text="{Binding Position}" Canvas.Top="377"/>
+                <Button Canvas.Left="357" Canvas.Top="178" Width="173" Height="35">
+                    <TextBlock TextWrapping="Wrap" Text="Set Max Distance to Current Position" TextAlignment="Center" Width="131"/>
+                </Button>
 
             </Canvas>
         </GroupBox>
@@ -47,7 +48,7 @@
 
             </Canvas>
         </GroupBox>
-        
+
 
 
     </Grid>

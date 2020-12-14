@@ -51,7 +51,7 @@ namespace Akoustis90142UI.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Laborare;component/views/configurationmanagerview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Akoustis90142UI;component/views/configurationmanagerview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Views\ConfigurationManagerView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

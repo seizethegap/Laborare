@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\
+C:\Users\Andrew N\Desktop\Laborare\Akoustis90142UI\obj\Debug\
 Laborare
 none
 false
 DEBUG;TRACE
-D:\Laborare\Laborare\Akoustis90142UI\App.xaml
+C:\Users\Andrew N\Desktop\Laborare\Akoustis90142UI\App.xaml
 6172765049
 
-22424088490
-17-1310377496
+23962170892
+17530125517
 Views\MainWindowView.xaml;Views\DiagnosticsView.xaml;Views\PasswordView.xaml;Views\ConfigurationManagerView.xaml;Views\IOCheckView.xaml;Views\MotorConfigurationView.xaml;
 
-True
+False
 
