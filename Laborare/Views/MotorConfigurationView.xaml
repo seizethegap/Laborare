@@ -25,9 +25,7 @@
                 <TextBlock Canvas.Left="430" TextWrapping="Wrap" Text="Motor Status:" Canvas.Top="356"/>
                 <Button Command="{Binding EnableMotorCommand}" Content="Enable Motor" Canvas.Left="357" Canvas.Top="71" Width="144" Height="38"/>
                 <Button Command="{Binding DisableMotorCommand}" Content="Disable Motor" Canvas.Left="357" Canvas.Top="130" Width="144" Height="38"/>
-                <Button Content="Home Motor" Canvas.Left="357" Canvas.Top="190" Width="144" Height="38"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Parsing Interval (ms):" VerticalAlignment="Top" Canvas.Left="56" Canvas.Top="231" Width="73"/>
-                <TextBox Height="23" Canvas.Left="158" TextWrapping="Wrap" Text="TextBox" Canvas.Top="231" Width="120"/>
+                <Button Command="{Binding HomeMotorCommand}" Content="Home Motor" Canvas.Left="357" Canvas.Top="190" Width="144" Height="38"/>
                 <TextBlock Canvas.Left="441" TextWrapping="Wrap" Text="{Binding MotorStatus}" Canvas.Top="377"/>
                 
             </Canvas>

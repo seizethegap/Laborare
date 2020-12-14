@@ -9,7 +9,7 @@
 
     class ZMotor : IAxisMotor, INotifyPropertyChanged
     {
-        public ZMotor(string motor_name, int motor_id, int resolution, 
+        public ZMotor(string motor_name, int motor_id, int resolution,
             IConnectionService connection_service, IAxisMotorCommandProcessor command_processor)
         {
             _Motor_Name = motor_name;
@@ -19,11 +19,16 @@
             _Command_Processor = command_processor;
 
             CheckMotorStatus();
+
+            _MessageDecoderService = new MessageDecoderService(this);
         }
 
         #region Z Motor Variables
         private IConnectionService _Connection_Service;
         private IAxisMotorCommandProcessor _Command_Processor;
+
+        private MessageDecoderService _MessageDecoderService;
+
         private string _Motor_Name;
         private int _MotorId;
 
@@ -31,6 +36,8 @@
         private double _MaxDistance;
 
         private string _MotorStatus;
+
+        private string _HomeStatus;
 
         // resolution to convert position from motor to inches
         private int _Resolution;
@@ -73,6 +80,19 @@
             {
                 _MotorStatus = value;
                 OnPropertyChanged("MotorStatus");
+            }
+        }
+
+        public string HomeStatus
+        {
+            get { return _HomeStatus; }
+            set
+            {
+                if (value != _HomeStatus)
+                {
+                    _HomeStatus = value;
+                    OnPropertyChanged("HomeStatus");
+                }
             }
         }
 
@@ -232,6 +252,11 @@
         {
             Connection_Service.Send(Command_Processor.DISABLE_MOTOR_COMMAND(_MotorId));
             CheckMotorStatus();
+        }
+
+        public void HomeMotor()
+        {
+            Connection_Service.Send(Command_Processor.SEND_MOTOR_HOME_COMMAND(_MotorId));
         }
 
         public void CheckMotorStatus()

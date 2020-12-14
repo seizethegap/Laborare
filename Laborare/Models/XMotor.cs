@@ -10,7 +10,7 @@
 
     class XMotor : IAxisMotor, INotifyPropertyChanged
     {
-        public XMotor(string motor_name, int motor_id, int resolution, 
+        public XMotor(string motor_name, int motor_id, int resolution,
             IConnectionService connection_service, IAxisMotorCommandProcessor command_processor)
         {
             _Motor_Name = motor_name;
@@ -20,17 +20,26 @@
             _Command_Processor = command_processor;
 
             CheckMotorStatus();
+
+            // our message decoder, this will read messages on the stream and update our properties as 
+            // appropriate.
+            _MessageDecoderService = new MessageDecoderService(this);
+
+
         }
 
         #region X Motor Variables
         private string _Motor_Name;
         private IAxisMotorCommandProcessor _Command_Processor;
         private IConnectionService _Connection_Service;
-        private CurrentMotorPositionService UpdateCurrentPositionService;
+        private CurrentMotorPositionService _UpdateCurrentPositionService;
+        private MessageDecoderService _MessageDecoderService;
 
         private int _MotorId;
 
         private string _MotorStatus;
+
+        private string _HomeStatus;
 
         // operator input restraint so that motor does not go too far and hit hard stop
         private double _MaxDistance;
@@ -45,7 +54,6 @@
 
         // motor position, should we parse the motor regularly to get the current position?
         private double _Position;
-
 
         #endregion
 
@@ -73,11 +81,26 @@
             get { return _MotorStatus; }
             set
             {
-                _MotorStatus = value;
-                OnPropertyChanged("MotorStatus");
+                if (value != _MotorStatus)
+                {
+                    _MotorStatus = value;
+                    OnPropertyChanged("MotorStatus");
+                }       
             }
         }
 
+        public string HomeStatus
+        {
+            get { return _HomeStatus; }
+            set
+            {
+                if (value != _HomeStatus)
+                {
+                    _HomeStatus = value;
+                    OnPropertyChanged("HomeStatus");
+                }
+            }
+        }
         public IConnectionService Connection_Service
         {
             get
@@ -101,6 +124,7 @@
                 _Command_Processor = value;
             }
         }
+
        
         /// <summary>
         /// Motor parameter variables
@@ -209,13 +233,18 @@
         public void EnableMotor()
         {
             Connection_Service.Send(Command_Processor.ENABLE_MOTOR_COMMAND(_MotorId));
-            CheckMotorStatus();
+            MotorStatus = "Enabled";
         }
 
         public void DisableMotor()
         {
             Connection_Service.Send(Command_Processor.DISABLE_MOTOR_COMMAND(_MotorId));
-            CheckMotorStatus();
+            MotorStatus = "Disabled";
+        }
+
+        public void HomeMotor()
+        {
+            Connection_Service.Send(Command_Processor.SEND_MOTOR_HOME_COMMAND(_MotorId));
         }
 
         public void CheckMotorStatus()

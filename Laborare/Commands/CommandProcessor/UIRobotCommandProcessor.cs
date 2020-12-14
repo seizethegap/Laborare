@@ -65,6 +65,12 @@
             return null;
         }
 
+        public string MOTOR_HOME_FALSE_MESSAGE(int uId)
+        {
+            // UIRobot does not have implementation for this command
+            return null;
+        }
+
         public string MOTOR_ENABLED_MESSAGE(int uId)
         {
             return null;

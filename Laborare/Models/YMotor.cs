@@ -19,14 +19,20 @@
             _Command_Processor = command_processor;
 
             CheckMotorStatus();
+
+            _MessageDecoderService = new MessageDecoderService(this);
         }
 
         private IAxisMotorCommandProcessor _Command_Processor;
         private IConnectionService _Connection_Service;
+
+        private MessageDecoderService _MessageDecoderService;
+
         private string _Motor_Name;
         private int _MotorId;
 
         private string _MotorStatus;
+        private string _HomeStatus;
 
         // operator input restraint so that motor does not go too far and hit hard stop
         private double _MaxDistance;
@@ -67,11 +73,26 @@
             get { return _MotorStatus; }
             set
             {
-                _MotorStatus = value;
-                OnPropertyChanged("MotorStatus");
+                if (value != _MotorStatus)
+                {
+                    _MotorStatus = value;
+                    OnPropertyChanged("MotorStatus");
+                }
             }
         }
 
+        public string HomeStatus
+        {
+            get { return _HomeStatus; }
+            set
+            {
+                if (value != _HomeStatus)
+                {
+                    _HomeStatus = value;
+                    OnPropertyChanged("HomeStatus");
+                }
+            }
+        }
         public IConnectionService Connection_Service
         {
             get
@@ -213,6 +234,11 @@
         {
             Connection_Service.Send(Command_Processor.DISABLE_MOTOR_COMMAND(_MotorId));
             CheckMotorStatus();
+        }
+
+        public void HomeMotor()
+        {
+            Connection_Service.Send(Command_Processor.SEND_MOTOR_HOME_COMMAND(_MotorId));
         }
 
         public void CheckMotorStatus()

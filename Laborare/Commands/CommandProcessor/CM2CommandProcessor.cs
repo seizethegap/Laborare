@@ -68,6 +68,11 @@
             return "IN." + uId.ToString() + "=01";
         }
 
+        public string MOTOR_HOME_FALSE_MESSAGE(int uId)
+        {
+            return null; // to be implemented
+        }
+
         public string MOTOR_ENABLED_MESSAGE(int uId)
         {
             return "Ux." + uId.ToString() + "=8";

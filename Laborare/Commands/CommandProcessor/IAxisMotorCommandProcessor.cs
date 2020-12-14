@@ -18,6 +18,7 @@
 
 
         string MOTOR_HOME_TRUE_MESSAGE(int uId);
+        string MOTOR_HOME_FALSE_MESSAGE(int uId);
         string MOTOR_ENABLED_MESSAGE(int uId);
         string MOTOR_DISABLED_MESSAGE(int uId);
         string MOTOR_POSITION_MESSAGE(int uId);

@@ -18,6 +18,7 @@
         {
             EnableMotorCommand = new EnableMotorCommand(this);
             DisableMotorCommand = new DisableMotorCommand(this);
+            HomeMotorCommand = new HomeMotorCommand(this);
         }
 
         private string _SelectedMotor;
@@ -105,6 +106,12 @@
             private set;
         }
 
+        public ICommand HomeMotorCommand
+        {
+            get;
+            private set;
+        }
+
         public void EnableMotor()
         {
             _CurrentMotor.EnableMotor();
@@ -113,6 +120,11 @@
         public void DisableMotor()
         {
             _CurrentMotor.DisableMotor();
+        }
+
+        public void HomeMotor()
+        {
+            _CurrentMotor.HomeMotor();
         }
 
         public void SynchronizeMotorProperty()

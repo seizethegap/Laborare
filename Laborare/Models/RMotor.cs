@@ -17,6 +17,8 @@
             _Connection_Service = connection_service;
             _Command_Processor = command_processor;
             _MotorStatus = "N/A";
+
+
         }
 
         #region R Motor Variables
@@ -27,6 +29,8 @@
         private int _MotorId;
 
         private string _MotorStatus;
+
+        private string _HomeStatus;
 
         // operator input restraint so that motor does not go too far and hit hard stop
         private double _MaxDistance;
@@ -76,8 +80,24 @@
             get { return _MotorStatus; }
             set
             {
-                _MotorStatus = value;
-                OnPropertyChanged("MotorStatus");
+                if (value != _MotorStatus)
+                {
+                    _MotorStatus = value;
+                    OnPropertyChanged("MotorStatus");
+                } 
+            }
+        }
+
+        public string HomeStatus
+        {
+            get { return _HomeStatus; }
+            set
+            {
+                if (value != _HomeStatus)
+                {
+                    _HomeStatus = value;
+                    OnPropertyChanged("HomeStatus");
+                }
             }
         }
 
@@ -211,6 +231,11 @@
         public void DisableMotor()
         {
             Connection_Service.Send(Command_Processor.DISABLE_MOTOR_COMMAND(_MotorId));
+        }
+
+        public void HomeMotor()
+        {
+            Connection_Service.Send(Command_Processor.SEND_POSITION_COMMAND(_MotorId, 0));
         }
 
         public void CheckMotorStatus()

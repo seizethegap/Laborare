@@ -12,7 +12,10 @@
         IAxisMotorCommandProcessor Command_Processor { get; set; }
         double Position { get; set; }
         int Device_Id { get; set; }
+
+        int Resolution { get; set; }
         string MotorStatus { get; set; }
+        string HomeStatus { get; set; }
 
         void ReadEncoderPosition();
 
@@ -21,6 +24,8 @@
         void DisableMotor();
 
         void CheckMotorStatus();
+
+        void HomeMotor();
 
         event PropertyChangedEventHandler PropertyChanged;
     }

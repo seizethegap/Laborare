@@ -67,6 +67,7 @@
     <Compile Include="Commands\CommandProcessor\UIRobotCommandProcessor.cs" />
     <Compile Include="Commands\ViewModelCommands\IOCheckCommands\ApplyIoBoardIntervalSettingCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\IOCheckCommands\ReloadIoBoardsCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\HomeMotorCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\DisableMotorCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\EnableMotorCommand.cs" />
     <Compile Include="Configuration\IOLegendConfig.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Models\HalfIOBoard.cs" />
     <Compile Include="Models\IIOBoard.cs" />
     <Compile Include="Models\IAxisMotor.cs" />
+    <Compile Include="Services\MessageDecoderService.cs" />
     <Compile Include="Services\UnitConversionService.cs" />
     <Compile Include="Services\ReadVacuumGeneratorService.cs" />
     <Compile Include="Services\CurrentMotorPositionService.cs" />
