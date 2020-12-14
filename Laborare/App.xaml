@@ -1,9 +1,0 @@
-﻿<Application x:Class="Laborare.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Laborare"
-             StartupUri="Views/Akoustis_901_42/MainWindowView.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
-</Application>

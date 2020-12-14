@@ -1,0 +1,21 @@
+﻿<Window x:Class="Akoustis90142UI.Views.DiagnosticsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Akoustis90142UI.Views"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        mc:Ignorable="d"
+        Title="Diagnostics" Height="826" Width="1386">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="795" VerticalAlignment="Top" Width="1378">
+            <TabItem Header="I/O Check">
+                <local:IOCheckView />
+            </TabItem>
+            <TabItem Header="Motor Configuration">
+                <local:MotorConfigurationView/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

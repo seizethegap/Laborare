@@ -1,0 +1,16 @@
+C:\Users\Andrew N\Desktop\Laborare\ClassLibrary1\obj\Debug\Laborare.Core.csprojAssemblyReference.cache
+C:\Users\Andrew N\Desktop\Laborare\ClassLibrary1\obj\Debug\Laborare.Core.csproj.CoreCompileInputs.cache
+C:\Users\Andrew N\Desktop\Laborare\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Andrew N\Desktop\Laborare\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Andrew N\Desktop\Laborare\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Andrew N\Desktop\Laborare\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Andrew N\Desktop\Laborare\Laborare.Core\obj\Debug\Laborare.Core.csproj.CoreCompileInputs.cache
+C:\Users\Andrew N\Desktop\Laborare\Laborare.Core\bin\Debug\Laborare.Core.dll
+C:\Users\Andrew N\Desktop\Laborare\Laborare.Core\bin\Debug\Laborare.Core.pdb
+C:\Users\Andrew N\Desktop\Laborare\Laborare.Core\obj\Debug\Laborare.Core.dll
+C:\Users\Andrew N\Desktop\Laborare\Laborare.Core\obj\Debug\Laborare.Core.pdb
+D:\Laborare\Laborare\Laborare.Core\bin\Debug\Laborare.Core.dll
+D:\Laborare\Laborare\Laborare.Core\bin\Debug\Laborare.Core.pdb
+D:\Laborare\Laborare\Laborare.Core\obj\Debug\Laborare.Core.csprojResolveAssemblyReference.cache
+D:\Laborare\Laborare\Laborare.Core\obj\Debug\Laborare.Core.dll
+D:\Laborare\Laborare\Laborare.Core\obj\Debug\Laborare.Core.pdb
