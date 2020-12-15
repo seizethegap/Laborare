@@ -53,7 +53,7 @@ namespace Akoustis90142UI.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Laborare;component/views/diagnosticsview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Akoustis90142UI;component/views/diagnosticsview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Views\DiagnosticsView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

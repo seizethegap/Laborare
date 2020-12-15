@@ -1,20 +1,20 @@
-﻿Laborare
+﻿Akoustis90142UI
 
 
 winexe
 C#
 .cs
-C:\Users\Andrew N\Desktop\Laborare\Akoustis90142UI\obj\Debug\
-Laborare
+D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\
+Akoustis90142UI
 none
 false
 DEBUG;TRACE
-C:\Users\Andrew N\Desktop\Laborare\Akoustis90142UI\App.xaml
+D:\Laborare\Laborare\Akoustis90142UI\App.xaml
 6172765049
 
-22-227764240
-17530125517
+19-1912224938
+17-1310377496
 Views\MainWindowView.xaml;Views\DiagnosticsView.xaml;Views\PasswordView.xaml;Views\ConfigurationManagerView.xaml;Views\IOCheckView.xaml;Views\MotorConfigurationView.xaml;
 
-True
+False
 
