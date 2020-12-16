@@ -29,9 +29,12 @@ D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Akoustis90142UI.g.resources
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Akoustis90142UI.Properties.Resources.resources
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Akoustis90142UI.exe
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Akoustis90142UI.pdb
+<<<<<<< HEAD
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\FineTuneView.baml
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\SetupParametersView.baml
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\FineTuneView.g.cs
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\SetupParametersView.g.cs
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TrayConfigurationView.g.cs
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TrayConfigurationView.baml
+=======
+>>>>>>> 97c4b471ee9ca6658459dc464dfe678fef88f590

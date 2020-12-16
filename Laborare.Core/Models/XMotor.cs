@@ -19,6 +19,11 @@
             _Connection_Service = connection_service;
             _Command_Processor = command_processor;
 
+<<<<<<< HEAD
+=======
+            CheckMotorStatus();
+
+>>>>>>> 97c4b471ee9ca6658459dc464dfe678fef88f590
         }
 
         #region X Motor Variables
