@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Laborare\Laborare\Akoustis90142UI\App.xaml
-6172765049
+9-1138602881
 
-19-1912224938
+24-1247946824
 17-1310377496
-Views\MainWindowView.xaml;Views\DiagnosticsView.xaml;Views\PasswordView.xaml;Views\ConfigurationManagerView.xaml;Views\IOCheckView.xaml;Views\MotorConfigurationView.xaml;
+Views\MainWindowView.xaml;Views\DiagnosticsView.xaml;Views\PasswordView.xaml;Views\ConfigurationManagerView.xaml;Views\IOCheckView.xaml;Views\MotorConfigurationView.xaml;Views\FineTuneView.xaml;Views\SetupParametersView.xaml;Views\TrayConfigurationView.xaml;
 
 False
 
