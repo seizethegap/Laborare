@@ -21,7 +21,7 @@
         private int _ReadTimeout;
         private int _WriteTimeout;
 
-        private string _ReceivedData = "";
+        private string _ReceivedData;
 
         private int _Comms_Id;
 
@@ -56,7 +56,7 @@
             try
             {
                 _SerialConnection.Open();
-                //_SerialConnection.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(Receive);
+                _SerialConnection.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(Receive);
             }
             catch (Exception ex)
             {
@@ -69,39 +69,6 @@
             _SerialConnection.Close();
         }
 
-        public async Task<string> ReadLineAsync()
-        {
-            byte[] buffer = new byte[100];
-            string ret = string.Empty;
-
-            while (true)
-            {
-                await _SerialConnection.BaseStream.ReadAsync(buffer, 0, 100);
-                ret += _SerialConnection.Encoding.GetString(buffer);
-
-                _ReceivedData = ret.Substring(0, ret.Length - _SerialConnection.NewLine.Length);
-            }
-        }
-
-        public async Task WriteLineAsync(string data)
-        {
-            byte[] encodedStr = _SerialConnection.Encoding.GetBytes(data + "\r");
-
-            await _SerialConnection.BaseStream.WriteAsync(encodedStr, 0, encodedStr.Length);
-            await _SerialConnection.BaseStream.FlushAsync();
-        }
-
-        public async void Send(string data)
-        {
-            await this.WriteLineAsync(data);
-            await this.ReadLineAsync();
-        }
-
-        public string ReceiveMessage()
-        {
-            return _ReceivedData;
-        }
-        /*
         public async void Send(string data)
         {
             if (_SerialConnection.IsOpen)
@@ -116,7 +83,7 @@
                      * this is due to PC timing issues and they are not directly connected
                      * to the COM port. The workaround is a small delay of 1ms in between
                      * characters.
-                     *
+                     */
                     foreach (byte hexval in hexstring)
                     {
                         byte[] _hexval = new byte[] { hexval }; // need to convert byte to byte[] to write
@@ -149,6 +116,6 @@
         {
             return _ReceivedData;
         }
-        */
+
     }
 }

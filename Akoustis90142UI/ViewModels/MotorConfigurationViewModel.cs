@@ -163,6 +163,7 @@
         {
             MotorStatus = _CurrentMotor.MotorStatus;
             Position = _CurrentMotor.Position;
+            MaxDistance = _CurrentMotor.MaxDistance;
         }
 
         /// <summary>

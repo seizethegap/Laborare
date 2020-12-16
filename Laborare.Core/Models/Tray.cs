@@ -4,114 +4,112 @@
     using System.Collections.Generic;
     using System.ComponentModel;
 
-    class Tray : INotifyPropertyChanged
+    public class Tray : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Dynamic size list of positions. This is where we will hold the position of each
+        /// socket in the tray, which is calculated from the tray's 4 corners.
+        /// Format:
+        /// Position n: { x_pos, y_pos, zget_pos, zput_pos }
+        /// </summary>
+        private List<double[]> _Positions;
+
+        /// <summary>
+        /// Holds the values for each pocket during tuning.
+        /// 
+        /// Format:
+        /// { x-position, y-position, zget-position, zput-position }
+        /// </summary>
+        private Dictionary<string, double[]> _Pockets;
+
+        private int _Rows, _Cols;
+
         /// <summary>
         /// Initialize an instance of a tray for the first time (or reset?)
         /// </summary>
         public Tray()
         {
-            TopLeftPocket = new Dictionary<string, double>()
-            {
-                { "X-Position", 0.0 },
-                { "Y-Position", 0.0 },
-                { "ZGet-Position", 0.0 },
-                { "ZPut-Position", 0.0 }
-            };
-            TopRightPocket = new Dictionary<string, double>()
-            {
-                { "X-Position", 0.0 },
-                { "Y-Position", 0.0 },
-                { "ZGet-Position", 0.0 },
-                { "ZPut-Position", 0.0 }
-            };
-            BottomLeftPocket = new Dictionary<string, double>()
-            {
-                { "X-Position", 0.0 },
-                { "Y-Position", 0.0 },
-                { "ZGet-Position", 0.0 },
-                { "ZPut-Position", 0.0 }
-            };
-            BottomRightPocket = new Dictionary<string, double>()
-            {
-                { "X-Position", 0.0 },
-                { "Y-Position", 0.0 },
-                { "ZGet-Position", 0.0 },
-                { "ZPut-Position", 0.0 }
-            };
+            _Positions = new List<double[]>();
+            _Pockets = new Dictionary<string, double[]>();
+            _Pockets.Add("Top Left Pocket", new double[] 
+            { 0.0, 0.0, 0.0, 0.0 });
+            _Pockets.Add("Top Right Pocket", new double[]
+            { 0.0, 0.0, 0.0, 0.0 });
+            _Pockets.Add("Bottom Left Pocket", new double[]
+            { 0.0, 0.0, 0.0, 0.0 });
+            _Pockets.Add("Bottom Right Pocket", new double[]
+            { 0.0, 0.0, 0.0, 0.0 });
         }
-
-        /// <summary>
-        /// Initialize an instance of a tray based on the data loaded from db.
-        /// </summary>
-        public Tray(Dictionary<string, double> top_left_pocket, Dictionary<string, double> top_right_pocket,
-            Dictionary<string, double> bottom_left_pocket, Dictionary<string, double> bottom_right_pocket)
-        {
-            TopLeftPocket = top_left_pocket;
-            TopRightPocket = top_right_pocket;
-            BottomLeftPocket = bottom_left_pocket;
-            BottomRightPocket = bottom_right_pocket;
-        }
-
-        // tray variables to keep track of
-        private Dictionary<string, double> _TopLeftPocket;
-        private Dictionary<string, double> _TopRightPocket;
-        private Dictionary<string, double> _BottomLeftPocket;
-        private Dictionary<string, double> _BottomRightPocket;
 
         #region Binding variables
-        public Dictionary<string, double> TopLeftPocket
+        public List<double[]> Positions
         {
             get
             {
-                return _TopLeftPocket;
+                return _Positions;
             }
             set
             {
-                _TopLeftPocket = value;
-                OnPropertyChanged("TopLeftPocket");
+                if (value != _Positions)
+                {
+                    _Positions = value;
+                    OnPropertyChanged("Positions");
+                }
             }
         }
 
-        public Dictionary<string, double> TopRightPocket
+        public Dictionary<string, double[]> Pockets
         {
             get
             {
-                return _TopRightPocket;
+                return _Pockets;
             }
             set
             {
-                _TopRightPocket = value;
-                OnPropertyChanged("TopRightPocket");
+                if (value != _Pockets)
+                {
+                    _Pockets = value;
+                    OnPropertyChanged("Pockets");
+                }
             }
         }
 
-        public Dictionary<string, double> BottomLeftPocket
+        public int Rows
         {
             get
             {
-                return _BottomLeftPocket;
+                return _Rows;
             }
             set
             {
-                _BottomLeftPocket = value;
-                OnPropertyChanged("BottomLeftPocket");
+                _Rows = value;
+                OnPropertyChanged("Rows");
             }
         }
 
-        public Dictionary<string, double> BottomRightPocket
+        public int Cols
         {
             get
             {
-                return _BottomRightPocket;
+                return _Cols;
             }
             set
             {
-                _BottomRightPocket = value;
-                OnPropertyChanged("BottomRightPocket");
+                _Cols = value;
+                OnPropertyChanged("Cols");
             }
         }
+
         #endregion
+
+        public void CreateNewPositions()
+        {
+            for (int i = 0; i < Rows * Cols; i++)
+            {
+                // create 0 value positions on the tray
+                Positions.Add(new double[] { 0.0, 0.0, 0.0, 0.0 });
+            }
+        }
 
         #region INotifyPropertyChanged Members
 

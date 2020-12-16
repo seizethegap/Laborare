@@ -18,9 +18,6 @@
             _Connection_Service = connection_service;
             _Command_Processor = command_processor;
 
-            CheckMotorStatus();
-
-            _MessageDecoderService = new MessageDecoderService(this);
         }
 
         private IAxisMotorCommandProcessor _Command_Processor;

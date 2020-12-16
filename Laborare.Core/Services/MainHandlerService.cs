@@ -1,6 +1,6 @@
 ﻿namespace Laborare.Core.Services
 {
-
+    using System;
     using System.Collections.Generic;
     using System.Configuration;
     using System.Threading;
@@ -20,6 +20,8 @@
 
         // Holds value for whether motor position will be in millimeter or inches
         public static string _Metric_Setting = ConfigurationManager.AppSettings["metric_setting"];
+
+        public static int _NumOfTrays = Convert.ToInt32(ConfigurationManager.AppSettings["number_of_trays"]);
 
         // Holds value for interval of reading input signals from io board.
         public static string Read_Io_Interval_Setting
@@ -54,7 +56,12 @@
         /// <summary>
         /// This Dictionary will hold the initialized io boards detected from our USBIOBoardService
         /// </summary>
-        public static Dictionary<string, IIOBoard> ActiveIOBoards { get; set; } 
+        public static Dictionary<string, IIOBoard> ActiveIOBoards = new Dictionary<string, IIOBoard>();
+
+        /// <summary>
+        /// This Dictionary will hold the initialized trays detected.
+        /// </summary>
+        public static Dictionary<string, Tray> ActiveTrays = new Dictionary<string, Tray>();
 
         // TODO: what to do with peripherals that aren't motors?
         public static void InitializeTcpDevices()
@@ -297,6 +304,14 @@
                 {
                     //MessageBox.Show("There is an invalid entry in the IOLegend section of App.config.");
                 }
+            }
+        }
+
+        public static void InitializeTrays()
+        {
+            for (int i = 1; i <= _NumOfTrays; i++)
+            {
+                ActiveTrays.Add("Tray " + i.ToString(), new Tray());
             }
         }
     }

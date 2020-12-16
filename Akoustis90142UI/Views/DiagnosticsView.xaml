@@ -12,8 +12,14 @@
             <TabItem Header="I/O Check">
                 <local:IOCheckView />
             </TabItem>
+            <TabItem Header="Setup Parameters">
+                <local:SetupParametersView />
+            </TabItem>
             <TabItem Header="Motor Configuration">
-                <local:MotorConfigurationView/>
+                <local:MotorConfigurationView />
+            </TabItem>
+            <TabItem Header="Tray Configuration">
+                <local:TrayConfigurationView />
             </TabItem>
         </TabControl>
 

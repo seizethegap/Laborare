@@ -19,12 +19,6 @@
             _Connection_Service = connection_service;
             _Command_Processor = command_processor;
 
-            CheckMotorStatus();
-
-            _UpdateCurrentPositionService = new CurrentMotorPositionService(this);
-            // our message decoder, this will read messages on the stream and update our properties as 
-            // appropriate.
-            _MessageDecoderService = new MessageDecoderService(this);
         }
 
         #region X Motor Variables

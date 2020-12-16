@@ -36,7 +36,6 @@
             // board names and serial numbers
             StringBuilder sn = new StringBuilder(512);
             StringBuilder desc = new StringBuilder(512);
-            MainHandlerService.ActiveIOBoards = new Dictionary<string, IIOBoard>();
 
             try
             {

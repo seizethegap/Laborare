@@ -83,5 +83,8 @@
     <Compile Include="Services\UnitConversionService.cs" />
     <Compile Include="Services\USBIOBoardService.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
