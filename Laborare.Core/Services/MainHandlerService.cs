@@ -23,6 +23,12 @@
 
         public static int _NumOfTrays = Convert.ToInt32(ConfigurationManager.AppSettings["number_of_trays"]);
 
+        public static int _NumOfPrecisors = Convert.ToInt32(ConfigurationManager.AppSettings["number_of_precisors"]);
+
+        public static int _NumOfTestSockets = Convert.ToInt32(ConfigurationManager.AppSettings["number_of_testsockets"]);
+
+        public static int _NumOfTapers = Convert.ToInt32(ConfigurationManager.AppSettings["number_of_tapers"]);
+
         // Holds value for interval of reading input signals from io board.
         public static string Read_Io_Interval_Setting
         {
@@ -62,6 +68,11 @@
         /// This Dictionary will hold the initialized trays detected.
         /// </summary>
         public static Dictionary<string, Tray> ActiveTrays = new Dictionary<string, Tray>();
+
+        public static Dictionary<string, Precisor> ActivePrecisors = new Dictionary<string, Precisor>();
+
+        public static Dictionary<string, TestSocket> ActiveTestSockets = new Dictionary<string, TestSocket>();
+
 
         // TODO: what to do with peripherals that aren't motors?
         public static void InitializeTcpDevices()
@@ -312,6 +323,22 @@
             for (int i = 1; i <= _NumOfTrays; i++)
             {
                 ActiveTrays.Add("Tray " + i.ToString(), new Tray());
+            }
+        }
+
+        public static void InitializePrecisors()
+        {
+            for (int i = 1; i <= _NumOfPrecisors; i++)
+            {
+                ActivePrecisors.Add("Precisor " + i.ToString(), new Precisor());
+            }
+        }
+
+        public static void InitializeTestSockets()
+        {
+            for (int i = 1; i <= _NumOfTestSockets; i++)
+            {
+                ActiveTestSockets.Add("Test Socket " + i.ToString(), new TestSocket());
             }
         }
     }

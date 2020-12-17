@@ -69,6 +69,10 @@
     <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\DisableMotorCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\EnableMotorCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\ApplyNewRowColToTraysCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\StopReadMotorEncoderCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\ReadMotorEncoderZCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\ReadMotorEncoderXYCommand.cs" />
+    <Compile Include="ViewModels\SetupParametersViewModel.cs" />
     <Compile Include="ViewModels\TrayConfigurationViewModel.cs" />
     <Compile Include="ViewModels\MotorConfigurationViewModel.cs" />
     <Compile Include="ViewModels\JobConfigurationViewModel.cs" />
@@ -90,6 +94,9 @@
     </Compile>
     <Compile Include="Views\FineTuneView.xaml.cs">
       <DependentUpon>FineTuneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrecisorConfigurationView.xaml.cs">
+      <DependentUpon>PrecisorConfigurationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SetupParametersView.xaml.cs">
       <DependentUpon>SetupParametersView.xaml</DependentUpon>
@@ -130,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FineTuneView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PrecisorConfigurationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

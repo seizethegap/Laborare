@@ -33,6 +33,8 @@ namespace Akoustis90142UI.Views
                 MainHandlerService.InitializeRs232Devices();
                 MainHandlerService.InitializeTcpDevices();
                 MainHandlerService.InitializeTrays();
+                MainHandlerService.InitializePrecisors();
+                MainHandlerService.InitializeTestSockets();
             }
             catch (Exception er)
             {

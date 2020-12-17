@@ -10,6 +10,7 @@
         string Motor_Name { get; set; }
         IConnectionService Connection_Service { get; set; }
         IAxisMotorCommandProcessor Command_Processor { get; set; }
+        CurrentMotorPositionService CurrentMotorPositionService { get; set; }
         double Position { get; set; }
         int Device_Id { get; set; }
         double MaxDistance { get; set; }

@@ -13,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using Akoustis90142UI.ViewModels;
-
 namespace Akoustis90142UI.Views
 {
     /// <summary>
-    /// Interaction logic for UserControl2.xaml
+    /// Interaction logic for PrecisorConfigurationView.xaml
     /// </summary>
-    public partial class SetupParametersView : UserControl
+    public partial class PrecisorConfigurationView : UserControl
     {
-        public SetupParametersView()
+        public PrecisorConfigurationView()
         {
             InitializeComponent();
-            this.DataContext = new SetupParametersViewModel();
         }
     }
 }

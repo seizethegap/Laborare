@@ -19,7 +19,9 @@
                 <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="173"/>
                 <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="215"/>
                 <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="258"/>
-                <ComboBox Canvas.Left="102" Canvas.Top="35" Width="213"/>
+                <ComboBox 
+                    ItemsSource="{Binding DelayConfigurationComboBox}" SelectedValue="{Binding DelayConfig_SelectedItem, Mode=TwoWay}"
+                    Canvas.Left="102" Canvas.Top="35" Width="213"/>
             </Canvas>
         </GroupBox>
         <GroupBox Header="Auto Run Configuration:" HorizontalAlignment="Left" Margin="497,52,0,0" VerticalAlignment="Top" Height="143" Width="375">
@@ -31,33 +33,10 @@
 
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Rotation Motor Configuration" HorizontalAlignment="Left" Margin="59,418,0,0" VerticalAlignment="Top" Height="106" Width="364">
-            <Canvas>
-                <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Rotation Delay (msec):" Canvas.Top="23" Width="73"/>
-                <TextBlock Canvas.Left="175" TextWrapping="Wrap" Text="Test Site Rotation (degrees):" Canvas.Top="23" Width="94"/>
-                <TextBox Height="23" Canvas.Left="89" TextWrapping="Wrap" Text="TextBox" Canvas.Top="30" Width="58" RenderTransformOrigin="0.448,0.478"/>
-                <TextBox Height="23" Canvas.Left="281" TextWrapping="Wrap" Text="TextBox" Canvas.Top="30" Width="58" RenderTransformOrigin="0.448,0.478"/>
-
-            </Canvas>
-        </GroupBox>
-        <GroupBox Header="Select Precisor Vacuum Valve" HorizontalAlignment="Left" Margin="59,550,0,0" VerticalAlignment="Top" Height="85" Width="364">
-            <Canvas>
-                <ComboBox Canvas.Left="42" Canvas.Top="21" Width="268"/>
-
-            </Canvas>
-        </GroupBox>
         <GroupBox Header="Test Site Options" HorizontalAlignment="Left" Margin="497,202,0,0" VerticalAlignment="Top" Height="94" Width="375">
             <Canvas>
                 <CheckBox Content="Enable Free Fall Drop to Socket" Canvas.Left="85" Canvas.Top="18"/>
                 <CheckBox Content="Enable Double Plunge at Test Site" Canvas.Left="85" Canvas.Top="42"/>
-
-            </Canvas>
-        </GroupBox>
-        <GroupBox Header="Precisor Options" HorizontalAlignment="Left" Margin="497,309,0,0" VerticalAlignment="Top" Height="103" Width="375">
-            <Canvas>
-                <CheckBox Content="Enable Precisor Before Test" Canvas.Left="85" Canvas.Top="12"/>
-                <CheckBox Content="Enable Precisor Vacuum" Canvas.Left="85" Canvas.Top="34"/>
-                <CheckBox Content="Enable Precisor Before Output Tray" Canvas.Left="85" Canvas.Top="56"/>
 
             </Canvas>
         </GroupBox>

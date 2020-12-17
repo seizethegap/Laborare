@@ -1,32 +1,31 @@
-﻿<UserControl x:Class="Akoustis90142UI.Views.TrayConfigurationView"
+﻿<UserControl x:Class="Akoustis90142UI.Views.PrecisorConfigurationView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             xmlns:local="clr-namespace:Akoustis90142UI.Views"
              d:DesignHeight="795" d:DesignWidth="1378">
     <Grid Background="#FFE5E5E5" Margin="0,0,-1,-2">
-        <GroupBox Header="Tray Information" HorizontalAlignment="Left" Margin="56,59,0,0" VerticalAlignment="Top" Height="225" Width="345">
+        <GroupBox Header="Select Precisor Vacuum Valve" HorizontalAlignment="Left" Margin="64,53,0,0" VerticalAlignment="Top" Height="85" Width="330">
             <Canvas>
-                <TextBlock Canvas.Left="58" TextWrapping="Wrap" Text="Number of Rows:" Canvas.Top="34"/>
-                <TextBlock Canvas.Left="58" TextWrapping="Wrap" Text="Number of Cols:" Canvas.Top="80"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding NumOfRows, Mode=TwoWay}" VerticalAlignment="Top" Width="102" Canvas.Left="166" Canvas.Top="32"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding NumOfCols, Mode=TwoWay}" VerticalAlignment="Top" Width="102" Canvas.Left="166" Canvas.Top="79"/>
-                <Button Command="{Binding ApplyNewRowColToTraysCommand}" Content="Apply to All Trays" Canvas.Left="58" Canvas.Top="131" Width="210" Height="39"/>
+                <ComboBox Canvas.Left="24" Canvas.Top="21" Width="268"/>
 
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Tray Tuning" HorizontalAlignment="Left" Margin="441,59,0,0" VerticalAlignment="Top" Height="310" Width="872">
+        <GroupBox Header="Precisor Options" HorizontalAlignment="Left" Margin="64,172,0,0" VerticalAlignment="Top" Height="103" Width="330">
             <Canvas>
-                <TextBlock Canvas.Left="211" TextWrapping="Wrap" Text="Select Tray:" Canvas.Top="23"/>
+                <CheckBox Content="Enable Precisor Before Test" Canvas.Left="76" Canvas.Top="12"/>
+                <CheckBox Content="Enable Precisor Vacuum" Canvas.Left="76" Canvas.Top="34"/>
+                <CheckBox Content="Enable Precisor Before Output Tray" Canvas.Left="76" Canvas.Top="56"/>
+
+            </Canvas>
+        </GroupBox>
+        <GroupBox Header="Precisor Tuning" HorizontalAlignment="Left" Margin="450,53,0,0" VerticalAlignment="Top" Height="310" Width="872">
+            <Canvas>
+                <TextBlock Canvas.Left="211" TextWrapping="Wrap" Text="Select Precisor:" Canvas.Top="23"/>
                 <ComboBox
-                    ItemsSource="{Binding Trays}" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding TrayTuning_SelectedTray, Mode=TwoWay}" 
-                    Canvas.Left="289" Canvas.Top="20" Width="158"/>
-                <TextBlock Canvas.Left="529" TextWrapping="Wrap" Text="Position:" Canvas.Top="23"/>
-                <ComboBox 
-                    ItemsSource="{Binding Pockets}" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding TrayTuning_SelectedPosition, Mode=TwoWay}" 
-                    HorizontalAlignment="Left" VerticalAlignment="Top" Width="217" Canvas.Left="596" Canvas.Top="21"/>
+        			ItemsSource="{Binding Trays}" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding TrayTuning_SelectedTray, Mode=TwoWay}" 
+        			Canvas.Left="304" Canvas.Top="20" Width="158"/>
                 <TextBlock Canvas.Left="98" TextWrapping="Wrap" Text="X" Canvas.Top="72" FontWeight="Bold"/>
                 <TextBlock Canvas.Left="308" TextWrapping="Wrap" Text="Y" Canvas.Top="72" FontWeight="Bold"/>
                 <TextBlock Canvas.Left="520" TextWrapping="Wrap" Text="Z-Get" Canvas.Top="72" FontWeight="Bold"/>
@@ -56,30 +55,11 @@
 
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Read Motor Encoders" HorizontalAlignment="Left" Margin="441,396,0,0" VerticalAlignment="Top" Height="115" Width="872">
+        <GroupBox Header="Read Motor Encoders" HorizontalAlignment="Left" Margin="450,390,0,0" VerticalAlignment="Top" Height="115" Width="872">
             <Canvas>
                 <Button Command="{Binding ReadMotorEncoderXYCommand}" Content="Read Motor Encoder for X and Y" Canvas.Left="51" Canvas.Top="22" Width="206" Height="45"/>
                 <Button Command="{Binding ReadMotorEncoderZCommand}" Content="Read Motor Encoder for Z" Canvas.Left="332" Canvas.Top="22" Width="206" Height="45"/>
                 <Button Command="{Binding StopReadMotorEncoderCommand}" Content="Stop Reading Motor Encoder" Canvas.Left="610" Canvas.Top="22" Width="206" Height="45"/>
-
-            </Canvas>
-        </GroupBox>
-        <GroupBox Header="Move to Tray Position" HorizontalAlignment="Left" Margin="56,302,0,0" VerticalAlignment="Top" Height="209" Width="345">
-            <Canvas>
-                <TextBlock Canvas.Left="44" TextWrapping="Wrap" Text="Select Tray:" Canvas.Top="22"/>
-                <ComboBox 
-                    ItemsSource="{Binding Trays}" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding Goto_SelectedTray, Mode=TwoWay}" 
-                    Canvas.Left="125" Canvas.Top="21" Width="155"/>
-                <TextBlock Canvas.Left="54" TextWrapping="Wrap" Text="Row:" Canvas.Top="89"/>
-                <TextBlock Canvas.Left="35" TextWrapping="Wrap" Text="Column:" Canvas.Top="121"/>
-                <ComboBox
-                    ItemsSource="{Binding RowComboBox}" SelectedValue="{Binding Goto_SelectedRow, Mode=TwoWay}" 
-                    Canvas.Left="107" Canvas.Top="85" Width="79"/>
-                <ComboBox 
-                    ItemsSource="{Binding ColComboBox}" SelectedValue="{Binding Goto_SelectedCol, Mode=TwoWay}" 
-                    Canvas.Left="107" Canvas.Top="119" Width="79"/>
-                <Button Content="Pick" Canvas.Left="221" Canvas.Top="72" Width="59" Height="42"/>
-                <Button Content="Put" Canvas.Left="221" Canvas.Top="119" Width="59" Height="42"/>
 
             </Canvas>
         </GroupBox>

@@ -7,7 +7,7 @@
              xmlns:local="clr-namespace:Akoustis90142UI.Views"
              d:DesignHeight="795" d:DesignWidth="1378">
     <Grid Background="#FFE5E5E5" Margin="0,0,-1,-2">
-        <GroupBox Header="Setup Motor Parameters" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" Height="453" Width="586">
+        <GroupBox Header="Setup Motor Parameters" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" Height="332" Width="586">
             <Canvas>
                 <TextBlock Canvas.Left="54" TextWrapping="Wrap" Text="Select Motor:" Canvas.Top="22"/>
                 <ComboBox 
@@ -21,11 +21,11 @@
                 <TextBox Height="23" Canvas.Left="158" TextWrapping="Wrap" Text="TextBox" Canvas.Top="149" Width="120"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Max Distance:" VerticalAlignment="Top" Canvas.Left="56" Canvas.Top="193"/>
                 <TextBox Height="23" Canvas.Left="158" TextWrapping="Wrap" Text="{Binding MaxDistance}" Canvas.Top="190" Width="120"/>
-                <TextBlock Canvas.Left="58" TextWrapping="Wrap" Text="Motor Status:" Canvas.Top="282"/>
+                <TextBlock Canvas.Left="56" TextWrapping="Wrap" Text="Motor Status:" Canvas.Top="248"/>
                 <Button Command="{Binding EnableMotorCommand}" Content="Enable Motor" Canvas.Left="357" Canvas.Top="71" Width="84" Height="38"/>
                 <Button Command="{Binding DisableMotorCommand}" Content="Disable Motor" Canvas.Left="446" Canvas.Top="71" Width="84" Height="38"/>
                 <Button Command="{Binding HomeMotorCommand}" Content="Home Motor" Canvas.Left="357" Canvas.Top="125" Width="173" Height="38"/>
-                <TextBlock Canvas.Left="69" TextWrapping="Wrap" Text="{Binding MotorStatus}" Canvas.Top="303"/>
+                <TextBlock Canvas.Left="67" TextWrapping="Wrap" Text="{Binding MotorStatus}" Canvas.Top="269"/>
                 <Button Command="{Binding SetMaxDistanceToCurrentPositionCommand}" Canvas.Left="357" Canvas.Top="178" Width="173" Height="35">
                     <TextBlock TextWrapping="Wrap" Text="Set Max Distance to Current Position" TextAlignment="Center" Width="131"/>
                 </Button>
@@ -57,7 +57,16 @@
 
             </Canvas>
         </GroupBox>
-       
+        <GroupBox Header="Rotation Motor Configuration" HorizontalAlignment="Left" Margin="59,418,0,0" VerticalAlignment="Top" Height="100" Width="582">
+            <Canvas>
+                <TextBlock Canvas.Left="124" TextWrapping="Wrap" Text="Rotation Delay (msec):" Canvas.Top="24" Width="73"/>
+                <TextBlock Canvas.Left="289" TextWrapping="Wrap" Text="Test Site Rotation (degrees):" Canvas.Top="24" Width="94"/>
+                <TextBox Height="23" Canvas.Left="203" TextWrapping="Wrap" Text="TextBox" Canvas.Top="31" Width="58" RenderTransformOrigin="0.448,0.478"/>
+                <TextBox Height="23" Canvas.Left="395" TextWrapping="Wrap" Text="TextBox" Canvas.Top="31" Width="58" RenderTransformOrigin="0.448,0.478"/>
+
+            </Canvas>
+        </GroupBox>
+
 
 
 

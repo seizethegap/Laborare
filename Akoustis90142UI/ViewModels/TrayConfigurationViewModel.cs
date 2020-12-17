@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using System.Threading;
     using System.Threading.Tasks;
     using System.ComponentModel;
     using System.Windows.Input;
@@ -21,6 +22,9 @@
             _ColComboBox = new List<int>();
 
             ApplyNewRowColToTraysCommand = new ApplyNewRowColToTraysCommand(this);
+            ReadMotorEncoderXYCommand = new ReadMotorEncoderXYCommand(this);
+            ReadMotorEncoderZCommand = new ReadMotorEncoderZCommand(this);
+            StopReadMotorEncoderCommand = new StopReadMotorEncoderCommand(this);
         }
 
         // hold the combo box value selections
@@ -36,6 +40,8 @@
 
         private Dictionary<string, double[]> _Pockets;
 
+        private CancellationTokenSource CancelUpdatingPositions;
+
         // hold the collection of numbers for the row and col combo boxes
         private List<int> _RowComboBox;
         private List<int> _ColComboBox;
@@ -45,6 +51,14 @@
 
         // tray information variables
         private int _NumOfRows, _NumOfCols;
+
+        public Dictionary<string, IAxisMotor> Motors
+        {
+            get
+            {
+                return MainHandlerService.AxisMotors;
+            }
+        }
 
         public Dictionary<string, Tray> Trays
         {
@@ -261,6 +275,114 @@
         {
             get;
             private set;
+        }
+
+        public ICommand ReadMotorEncoderXYCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand ReadMotorEncoderZCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand StopReadMotorEncoderCommand
+        {
+            get;
+            private set;
+        }
+
+        public void DisableAllMotors()
+        {
+            foreach (var motor in Motors)
+            {
+                motor.Value.DisableMotor();
+            }
+        }
+
+        public void EnableAllMotors()
+        {
+            foreach (var motor in Motors)
+            {
+                motor.Value.EnableMotor();
+            }
+        }
+
+        public void ReadMotorEncoderXY()
+        {
+            DisableAllMotors();
+
+            Motors["x1_motor"].CurrentMotorPositionService.Start();
+            Motors["y1_motor"].CurrentMotorPositionService.Start();
+
+            StartUpdatingXYMotorPositionsToTrayPositions();
+        }
+
+        public void ReadMotorEncoderZ()
+        {
+            DisableAllMotors();
+
+            Motors["z1_motor"].CurrentMotorPositionService.Start();
+
+            StartUpdatingZMotorPositionsToTrayPositions();
+        }
+
+        public void StopReadMotorEncoder()
+        {
+            EnableAllMotors();
+
+            // TODO: You need to handle this correctly, it will crash now because
+            // it will crash because not all motors are running this service when it is stopped.
+            try
+            {
+                Motors["x1_motor"].CurrentMotorPositionService.Stop();
+                Motors["y1_motor"].CurrentMotorPositionService.Stop();
+                Motors["z1_motor"].CurrentMotorPositionService.Stop();
+            }
+            catch (Exception er)
+            {
+                // in here means service never started.
+            }
+
+            CancelUpdatingMotorPositionsToTrayPositions();
+
+        }
+
+        public void StartUpdatingXYMotorPositionsToTrayPositions()
+        {
+            CancelUpdatingPositions = new CancellationTokenSource();
+
+            var task = Task.Run(() =>
+            {
+                while (!CancelUpdatingPositions.Token.IsCancellationRequested)
+                {
+                    X_Position = Motors["x1_motor"].Position;
+                    Y_Position = Motors["y1_motor"].Position;
+                }
+            }, CancelUpdatingPositions.Token);
+        }
+
+        public void StartUpdatingZMotorPositionsToTrayPositions()
+        {
+            CancelUpdatingPositions = new CancellationTokenSource();
+
+            var task = Task.Run(() =>
+            {
+                while (!CancelUpdatingPositions.Token.IsCancellationRequested)
+                {
+                    ZGet_Position = Motors["z1_motor"].Position;
+                    ZPut_Position = Motors["z1_motor"].Position - 0.10;
+                }
+            }, CancelUpdatingPositions.Token);
+        }
+
+        public void CancelUpdatingMotorPositionsToTrayPositions()
+        {
+            CancelUpdatingPositions.Cancel();
+            CancelUpdatingPositions.Dispose();
         }
 
         public void SynchronizeTrayPositions()

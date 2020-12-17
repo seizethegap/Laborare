@@ -18,12 +18,13 @@
             _Connection_Service = connection_service;
             _Command_Processor = command_processor;
 
+            _CurrentMotorPositionService = new CurrentMotorPositionService(this);
         }
 
         private IAxisMotorCommandProcessor _Command_Processor;
         private IConnectionService _Connection_Service;
 
-        private MessageDecoderService _MessageDecoderService;
+        private CurrentMotorPositionService _CurrentMotorPositionService;
 
         private string _Motor_Name;
         private int _MotorId;
@@ -47,6 +48,18 @@
 
 
         #region Binding Variables to UI Element
+        public CurrentMotorPositionService CurrentMotorPositionService
+        {
+            get
+            {
+                return _CurrentMotorPositionService;
+            }
+            set
+            {
+                _CurrentMotorPositionService = value;
+            }
+        }
+
         public string Motor_Name
         {
             get { return _Motor_Name; }

@@ -21,6 +21,9 @@
             <TabItem Header="Tray Configuration">
                 <local:TrayConfigurationView />
             </TabItem>
+            <TabItem Header="Precisor Configuration">
+                
+            </TabItem>
         </TabControl>
 
     </Grid>
