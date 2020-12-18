@@ -29,6 +29,8 @@
 
         public static int _NumOfTapers = Convert.ToInt32(ConfigurationManager.AppSettings["number_of_tapers"]);
 
+        public static int _NumOfBuckets = Convert.ToInt32(ConfigurationManager.AppSettings["number_of_buckets"]);
+
         // Holds value for interval of reading input signals from io board.
         public static string Read_Io_Interval_Setting
         {
@@ -72,6 +74,8 @@
         public static Dictionary<string, Precisor> ActivePrecisors = new Dictionary<string, Precisor>();
 
         public static Dictionary<string, TestSocket> ActiveTestSockets = new Dictionary<string, TestSocket>();
+
+        public static Dictionary<string, Bucket> ActiveBuckets = new Dictionary<string, Bucket>();
 
 
         // TODO: what to do with peripherals that aren't motors?
@@ -339,6 +343,14 @@
             for (int i = 1; i <= _NumOfTestSockets; i++)
             {
                 ActiveTestSockets.Add("Test Socket " + i.ToString(), new TestSocket());
+            }
+        }
+
+        public static void InitializeBuckets()
+        {
+            for (int i = 1; i <= _NumOfBuckets; i++)
+            {
+                ActiveBuckets.Add("Bucket " + i.ToString(), new Bucket());
             }
         }
     }

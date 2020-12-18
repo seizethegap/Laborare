@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="795" d:DesignWidth="1378">
     <Grid Background="#FFE5E5E5" Margin="0,0,-1,-2">
-        <GroupBox Header="Configure Delays" HorizontalAlignment="Left" Margin="59,52,0,0" VerticalAlignment="Top" Height="347" Width="364">
+        <GroupBox Header="Configure Delays" HorizontalAlignment="Left" Margin="59,52,0,0" VerticalAlignment="Top" Height="360" Width="364">
             <Canvas>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Selection:" VerticalAlignment="Top" Canvas.Left="30" Canvas.Top="38"/>
                 <TextBlock Canvas.Left="71" TextWrapping="Wrap" Text="Vacuum On:" Canvas.Top="89"/>
@@ -33,31 +33,7 @@
 
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Test Site Options" HorizontalAlignment="Left" Margin="497,202,0,0" VerticalAlignment="Top" Height="94" Width="375">
-            <Canvas>
-                <CheckBox Content="Enable Free Fall Drop to Socket" Canvas.Left="85" Canvas.Top="18"/>
-                <CheckBox Content="Enable Double Plunge at Test Site" Canvas.Left="85" Canvas.Top="42"/>
-
-            </Canvas>
-        </GroupBox>
-        <GroupBox Header="Tape and Reel Options" HorizontalAlignment="Left" Margin="941,52,0,0" VerticalAlignment="Top" Height="360" Width="375">
-            <Canvas>
-                <CheckBox Content="Enable Taper Vacuum" Canvas.Left="103" Canvas.Top="20"/>
-                <CheckBox Content="Enable Taper Vibration" Canvas.Left="103" Canvas.Top="51"/>
-                <CheckBox Content="Enable Precisor Before Taper" Canvas.Left="103" Canvas.Top="83"/>
-                <CheckBox Content="Enable Red Ring Light On" Canvas.Left="103" Canvas.Top="117"/>
-                <CheckBox Content="Enable Tape Inspection" Canvas.Left="103" Canvas.Top="152"/>
-                <CheckBox Content="Enable Free Fall Drop to Taper" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="103" Canvas.Top="186"/>
-                <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Tape Rotation (degrees):" Canvas.Top="227" Height="35" Width="75"/>
-                <TextBox Height="23" Canvas.Left="91" TextWrapping="Wrap" Text="TextBox" Canvas.Top="234" Width="69"/>
-                <TextBlock Canvas.Left="177" TextWrapping="Wrap" Text="# of Pockets Before Checking Devices:" Canvas.Top="227" Height="38" Width="106"/>
-                <TextBox Height="23" Canvas.Left="288" TextWrapping="Wrap" Text="TextBox" Canvas.Top="233" Width="63"/>
-                <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="Total Tape Count:" Canvas.Top="292" Height="35" Width="75"/>
-                <TextBox Height="23" Canvas.Left="91" TextWrapping="Wrap" Text="TextBox" Canvas.Top="296" Width="69"/>
-
-            </Canvas>
-        </GroupBox>
-        <GroupBox Header="Sort Interface" HorizontalAlignment="Left" Margin="497,433,0,0" VerticalAlignment="Top" Height="202" Width="375">
+        <GroupBox Header="Sort Interface" HorizontalAlignment="Left" Margin="497,210,0,0" VerticalAlignment="Top" Height="202" Width="375">
             <Canvas>
                 <TextBlock Canvas.Left="22" TextWrapping="Wrap" Text="Output Location:" Canvas.Top="45"/>
                 <ComboBox Canvas.Left="124" Canvas.Top="43" Width="216"/>
@@ -66,7 +42,7 @@
 
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Tester Settings" HorizontalAlignment="Left" Margin="941,433,0,0" VerticalAlignment="Top" Height="202" Width="375">
+        <GroupBox Header="Tester Settings" HorizontalAlignment="Left" Margin="939,52,0,0" VerticalAlignment="Top" Height="202" Width="375">
             <Canvas>
                 <TextBox Height="23" Canvas.Left="188" TextWrapping="Wrap" Text="TextBox" Canvas.Top="35" Width="120"/>
                 <TextBlock Canvas.Left="45" TextWrapping="Wrap" Text="Test Time Out (msec):" Canvas.Top="37"/>

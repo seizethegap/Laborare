@@ -22,7 +22,13 @@
                 <local:TrayConfigurationView />
             </TabItem>
             <TabItem Header="Precisor Configuration">
-                
+                <local:PrecisorConfigurationView />
+            </TabItem>
+            <TabItem Header="Test Socket Configuration">
+                <local:TestSocketConfigurationView />
+            </TabItem>
+            <TabItem Header="Taper Configuration">
+                <local:TaperConfigurationView />
             </TabItem>
         </TabControl>
 

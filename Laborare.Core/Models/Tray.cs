@@ -26,6 +26,8 @@
 
         private int _VacuumOn_Delay, _VacuumOff_Delay, _AirblowOn_Delay, _AirblowOff_Delay, _ZPut_Delay;
 
+        private string _TestSortResult;
+
 
 
 
@@ -184,6 +186,20 @@
                 OnPropertyChanged("Cols");
             }
         }
+
+        public string TestSortResult
+        {
+            get
+            {
+                return _TestSortResult;
+            }
+            set
+            {
+                _TestSortResult = value;
+                OnPropertyChanged("TestSortResult");
+            }
+        }
+
 
         #endregion
 

@@ -35,3 +35,9 @@ D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\FineTuneView.g.cs
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\SetupParametersView.g.cs
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TrayConfigurationView.g.cs
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TrayConfigurationView.baml
+D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\PrecisorConfigurationView.baml
+D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\PrecisorConfigurationView.g.cs
+D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TaperConfigurationView.baml
+D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TestSocketConfigurationView.baml
+D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TaperConfigurationView.g.cs
+D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TestSocketConfigurationView.g.cs

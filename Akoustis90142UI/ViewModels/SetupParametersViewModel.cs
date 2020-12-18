@@ -78,6 +78,22 @@
             }
         }
 
+        public Dictionary<string, Bucket> Buckets
+        {
+            get
+            {
+                return MainHandlerService.ActiveBuckets;
+            }
+            set
+            {
+                if (value != MainHandlerService.ActiveBuckets)
+                {
+                    MainHandlerService.ActiveBuckets = value;
+                    OnPropertyChanged("Buckets");
+                }
+            }
+        }
+
         public List<string> DelayConfigurationComboBox
         {
             get
@@ -194,13 +210,9 @@
             {
                 _SortInterface_CurrentItem = Trays[_SortInterface_SelectedItem];
             }
-            else if (_SortInterface_SelectedItem.Contains("Precisor"))
+            else if (_SortInterface_SelectedItem.Contains("Bucket"))
             {
-                _SortInterface_CurrentItem = Precisors[_SortInterface_SelectedItem];
-            }
-            else if (_SortInterface_CurrentItem.Contains("Test Socket"))
-            {
-                _SortInterface_CurrentItem = TestSockets[_SortInterface_SelectedItem];
+                _SortInterface_CurrentItem = Buckets[_SortInterface_SelectedItem];
             }
         }
 

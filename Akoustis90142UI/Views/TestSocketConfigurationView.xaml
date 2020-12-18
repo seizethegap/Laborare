@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Akoustis90142UI.Views.PrecisorConfigurationView"
+﻿<UserControl x:Class="Akoustis90142UI.Views.TestSocketConfigurationView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,18 +6,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="795" d:DesignWidth="1378">
     <Grid Background="#FFE5E5E5" Margin="0,0,-1,-2">
-        <GroupBox Header="Select Precisor Vacuum Valve" HorizontalAlignment="Left" Margin="64,53,0,0" VerticalAlignment="Top" Height="85" Width="330">
+        <GroupBox Header="Test Site Options" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top" Height="94" Width="375">
             <Canvas>
-                <ComboBox Canvas.Left="24" Canvas.Top="21" Width="268"/>
-
-            </Canvas>
-        </GroupBox>
-        <GroupBox Header="Precisor Options" HorizontalAlignment="Left" Margin="64,172,0,0" VerticalAlignment="Top" Height="128" Width="330">
-            <Canvas>
-                <CheckBox Content="Enable Precisor Before Test" Canvas.Left="50" Canvas.Top="12"/>
-                <CheckBox Content="Enable Precisor Vacuum" Canvas.Left="50" Canvas.Top="34"/>
-                <CheckBox Content="Enable Precisor Before Output Tray" Canvas.Left="50" Canvas.Top="56"/>
-                <CheckBox Content="Enable Precisor Before Taper" Canvas.Left="50" Canvas.Top="79"/>
+                <CheckBox Content="Enable Free Fall Drop to Socket" Canvas.Left="85" Canvas.Top="18"/>
+                <CheckBox Content="Enable Double Plunge at Test Site" Canvas.Left="85" Canvas.Top="42"/>
 
             </Canvas>
         </GroupBox>
@@ -29,7 +21,7 @@
 
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Taper Tuning" HorizontalAlignment="Left" Margin="523,53,0,0" VerticalAlignment="Top" Height="310" Width="736">
+        <GroupBox Header="Taper Tuning" HorizontalAlignment="Left" Margin="514,53,0,0" VerticalAlignment="Top" Height="310" Width="736">
             <Canvas>
                 <TextBlock Canvas.Left="312" TextWrapping="Wrap" Text="Select Taper:" Canvas.Top="25"/>
                 <ComboBox
@@ -67,6 +59,7 @@
 
             </Canvas>
         </GroupBox>
+
 
     </Grid>
 </UserControl>

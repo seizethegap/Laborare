@@ -1212,7 +1212,10 @@
             }
 
             // restart the readinputthread with new settings
-            ReadInputSignalService.Restart();
+            foreach (var board in IOBoards)
+            {
+                board.Value.ReadInputSignalService.Restart();
+            }
         }
 
         /// <summary>

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
-
-namespace Laborare.Core.Models
+﻿namespace Laborare.Core.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.ComponentModel;
+
+    using Laborare.Core.Services;
+
     public interface IIOBoard
     {
         int BoardNum { get; }
@@ -49,6 +51,8 @@ namespace Laborare.Core.Models
 
         byte InputSignal_Port0 { get; set; }
         byte InputSignal_Port1 { get; set; }
+
+        ReadInputSignalService ReadInputSignalService { get; }
 
         event PropertyChangedEventHandler PropertyChanged;
     }

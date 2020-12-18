@@ -101,6 +101,12 @@
     <Compile Include="Views\SetupParametersView.xaml.cs">
       <DependentUpon>SetupParametersView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TaperConfigurationView.xaml.cs">
+      <DependentUpon>TaperConfigurationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestSocketConfigurationView.xaml.cs">
+      <DependentUpon>TestSocketConfigurationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TrayConfigurationView.xaml.cs">
       <DependentUpon>TrayConfigurationView.xaml</DependentUpon>
     </Compile>
@@ -145,6 +151,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SetupParametersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TaperConfigurationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TestSocketConfigurationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
