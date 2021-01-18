@@ -28,17 +28,7 @@ namespace Akoustis90142UI.Views
             try
             {
                 InitializeComponent();
-<<<<<<< HEAD
                 MainHandlerService.InitializeApp();
-=======
-                USBIOBoardService.Start();
-                MainHandlerService.InitializeIoDeviceLocations();
-                MainHandlerService.InitializeRs232Devices();
-                MainHandlerService.InitializeTcpDevices();
-                MainHandlerService.InitializeTrays();
-                MainHandlerService.InitializePrecisors();
-                MainHandlerService.InitializeTestSockets();
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
             }
             catch (Exception er)
             {

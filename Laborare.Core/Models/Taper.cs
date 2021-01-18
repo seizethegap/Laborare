@@ -186,11 +186,7 @@
             }
             set
             {
-<<<<<<< HEAD
                 _EnableRedRingLight = value;
-=======
-                _EnableRedRightLight = value;
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 OnPropertyChanged("EnableRedRingLight");
             }
         }

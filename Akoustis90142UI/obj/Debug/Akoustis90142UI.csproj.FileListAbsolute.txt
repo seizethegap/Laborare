@@ -40,7 +40,6 @@ D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TaperConfigurationView.baml
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TestSocketConfigurationView.baml
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TaperConfigurationView.g.cs
 D:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TestSocketConfigurationView.g.cs
-<<<<<<< HEAD
 E:\Laborare\Laborare\Akoustis90142UI\bin\Debug\Akoustis90142UI.exe.config
 E:\Laborare\Laborare\Akoustis90142UI\bin\Debug\Akoustis90142UI.exe
 E:\Laborare\Laborare\Akoustis90142UI\bin\Debug\Akoustis90142UI.pdb
@@ -95,5 +94,3 @@ E:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\BowlFeederConfigurationView
 E:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TrayFineTuneConfigurationView.baml
 E:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\BowlFeederConfigurationView.g.cs
 E:\Laborare\Laborare\Akoustis90142UI\obj\Debug\Views\TrayFineTuneConfigurationView.g.cs
-=======
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487

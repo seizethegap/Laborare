@@ -19,7 +19,6 @@
         </GroupBox>
         <GroupBox Header="Tray Tuning" HorizontalAlignment="Left" Margin="441,59,0,0" VerticalAlignment="Top" Height="310" Width="872">
             <Canvas>
-<<<<<<< HEAD
                 <TextBlock Canvas.Left="165" TextWrapping="Wrap" Text="Select Tray:" Canvas.Top="23"/>
                 <ComboBox
                     ItemsSource="{Binding Trays}" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding TrayTuning_SelectedTray, Mode=TwoWay}" 
@@ -28,16 +27,6 @@
                 <ComboBox 
                     ItemsSource="{Binding Pockets}" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding TrayTuning_SelectedPosition, Mode=TwoWay}" 
                     HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Canvas.Left="444" Canvas.Top="21"/>
-=======
-                <TextBlock Canvas.Left="211" TextWrapping="Wrap" Text="Select Tray:" Canvas.Top="23"/>
-                <ComboBox
-                    ItemsSource="{Binding Trays}" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding TrayTuning_SelectedTray, Mode=TwoWay}" 
-                    Canvas.Left="289" Canvas.Top="20" Width="158"/>
-                <TextBlock Canvas.Left="529" TextWrapping="Wrap" Text="Position:" Canvas.Top="23"/>
-                <ComboBox 
-                    ItemsSource="{Binding Pockets}" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding TrayTuning_SelectedPosition, Mode=TwoWay}" 
-                    HorizontalAlignment="Left" VerticalAlignment="Top" Width="217" Canvas.Left="596" Canvas.Top="21"/>
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 <TextBlock Canvas.Left="98" TextWrapping="Wrap" Text="X" Canvas.Top="72" FontWeight="Bold"/>
                 <TextBlock Canvas.Left="308" TextWrapping="Wrap" Text="Y" Canvas.Top="72" FontWeight="Bold"/>
                 <TextBlock Canvas.Left="520" TextWrapping="Wrap" Text="Z-Get" Canvas.Top="72" FontWeight="Bold"/>
@@ -64,20 +53,13 @@
                 <Button Content="Home Z" Canvas.Left="696" Canvas.Top="221" Width="105" Height="43"/>
                 <TextBlock Canvas.Left="31" TextWrapping="Wrap" Text="Scale:" Canvas.Top="23"/>
                 <TextBox Height="23" Canvas.Left="70" TextWrapping="Wrap" Text="TextBox" Canvas.Top="21" Width="63"/>
-<<<<<<< HEAD
                 <Button Command="{Binding SaveCoordinatesCommand}" Content="Save Coordinates" Canvas.Left="689" Canvas.Top="16" Width="129" Height="30"/>
-=======
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
 
             </Canvas>
         </GroupBox>
         <GroupBox Header="Read Motor Encoders" HorizontalAlignment="Left" Margin="441,396,0,0" VerticalAlignment="Top" Height="115" Width="872">
             <Canvas>
-<<<<<<< HEAD
                 <Button Command="{Binding ReadMotorEncoderXYCommand}" Content="Read Motor Encoder for X and Y" Canvas.Left="51" Canvas.Top="22" Width="206" Height="45" />
-=======
-                <Button Command="{Binding ReadMotorEncoderXYCommand}" Content="Read Motor Encoder for X and Y" Canvas.Left="51" Canvas.Top="22" Width="206" Height="45"/>
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 <Button Command="{Binding ReadMotorEncoderZCommand}" Content="Read Motor Encoder for Z" Canvas.Left="332" Canvas.Top="22" Width="206" Height="45"/>
                 <Button Command="{Binding StopReadMotorEncoderCommand}" Content="Stop Reading Motor Encoder" Canvas.Left="610" Canvas.Top="22" Width="206" Height="45"/>
 
@@ -102,7 +84,6 @@
 
             </Canvas>
         </GroupBox>
-<<<<<<< HEAD
         <GroupBox Header="Advanced Options" HorizontalAlignment="Left" Margin="56,527,0,0" VerticalAlignment="Top" Height="209" Width="345">
             <Canvas>
                 <Button Name="AdvancedFineTune_btn" Content="Advanced Fine Tune" Canvas.Left="53" Canvas.Top="24" Width="217" Height="48" Click="AdvancedFineTune_btn_Click"/>
@@ -110,8 +91,6 @@
 
             </Canvas>
         </GroupBox>
-=======
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
 
     </Grid>
 </UserControl>

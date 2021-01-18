@@ -20,11 +20,7 @@
         public static string[] errMsg; // last error message for the corresponding board.
         static StringBuilder tmpErrMsg = new StringBuilder(512);
 
-<<<<<<< HEAD
         public static readonly Object UsbLockObj = new Object();
-=======
-        public static readonly Object obj = new Object();
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
 
         /* RP2005 Constructor
          * List of serial numbers passed in and parsed into StringBuilder sn and separated with commas, 
@@ -146,11 +142,7 @@
         {
             if (brd < numDevs)
             {
-<<<<<<< HEAD
                 lock (UsbLockObj)
-=======
-                lock (obj)
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 {
                     errCode[brd] = IUSBIOBoardService.RP_WritePort(hDIO[brd], port, value, tmpErrMsg);
                 }

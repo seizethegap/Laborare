@@ -7,7 +7,6 @@
     public class Tray : INotifyPropertyChanged
     {
         /// <summary>
-<<<<<<< HEAD
         /// Dynamic size dictionary of positions. This is where we will hold the position of each
         /// socket in the tray, which is calculated from the tray's 4 corners.
         /// 
@@ -21,14 +20,6 @@
         /// Position { row, col }: { x_pos, y_pos, zget_pos, zput_pos }
         /// </summary>
         private Dictionary<ValueTuple<int, int>, double[]> _Positions;
-=======
-        /// Dynamic size list of positions. This is where we will hold the position of each
-        /// socket in the tray, which is calculated from the tray's 4 corners.
-        /// Format:
-        /// Position n: { x_pos, y_pos, zget_pos, zput_pos }
-        /// </summary>
-        private List<double[]> _Positions;
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
 
         /// <summary>
         /// Holds the values for each pocket during tuning.
@@ -52,7 +43,6 @@
         /// </summary>
         public Tray()
         {
-<<<<<<< HEAD
             _Positions = new Dictionary<ValueTuple<int, int>, double[]>();
             _Pockets = new Dictionary<string, double[]>();
             _Pockets.Add("Top Left Pocket", new double[4]);
@@ -68,18 +58,6 @@
             AirblowOn_Delay = 32;
             AirblowOff_Delay = 10;
             ZPut_Delay = 23;
-=======
-            _Positions = new List<double[]>();
-            _Pockets = new Dictionary<string, double[]>();
-            _Pockets.Add("Top Left Pocket", new double[] 
-            { 0.0, 0.0, 0.0, 0.0 });
-            _Pockets.Add("Top Right Pocket", new double[]
-            { 0.0, 0.0, 0.0, 0.0 });
-            _Pockets.Add("Bottom Left Pocket", new double[]
-            { 0.0, 0.0, 0.0, 0.0 });
-            _Pockets.Add("Bottom Right Pocket", new double[]
-            { 0.0, 0.0, 0.0, 0.0 });
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         }
 
         #region Binding variables
@@ -116,7 +94,6 @@
         }
 
         public int AirblowOn_Delay
-<<<<<<< HEAD
         {
             get
             {
@@ -144,24 +121,10 @@
                 {
                     _AirblowOff_Delay = value;
                     OnPropertyChanged("AirblowOff_Delay");
-=======
-        {
-            get
-            {
-                return _AirblowOn_Delay;
-            }
-            set
-            {
-                if (value != _AirblowOn_Delay)
-                {
-                    _AirblowOn_Delay = value;
-                    OnPropertyChanged("AirblowOn_Delay");
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 }
             }
         }
 
-<<<<<<< HEAD
         public int ZPut_Delay
         {
             get
@@ -174,25 +137,10 @@
                 {
                     _ZPut_Delay = value;
                     OnPropertyChanged("ZPut_Delay");
-=======
-        public int AirblowOff_Delay
-        {
-            get
-            {
-                return _AirblowOff_Delay;
-            }
-            set
-            {
-                if (value != _AirblowOff_Delay)
-                {
-                    _AirblowOff_Delay = value;
-                    OnPropertyChanged("AirblowOff_Delay");
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 }
             }
         }
 
-<<<<<<< HEAD
         public Dictionary<ValueTuple<int, int>, double[]> Positions
         {
             get
@@ -205,57 +153,10 @@
                 {
                     _Positions = value;
                     OnPropertyChanged("Positions");
-=======
-        public int ZPut_Delay
-        {
-            get
-            {
-                return _ZPut_Delay;
-            }
-            set
-            {
-                if (value != _ZPut_Delay)
-                {
-                    _ZPut_Delay = value;
-                    OnPropertyChanged("ZPut_Delay");
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 }
             }
         }
 
-<<<<<<< HEAD
-        public Dictionary<string, double[]> Pockets
-        {
-            get
-            {
-                return _Pockets;
-            }
-            set
-            {
-                if (value != _Pockets)
-                {
-                    _Pockets = value;
-                    OnPropertyChanged("Pockets");
-=======
-        public List<double[]> Positions
-        {
-            get
-            {
-                return _Positions;
-            }
-            set
-            {
-                if (value != _Positions)
-                {
-                    _Positions = value;
-                    OnPropertyChanged("Positions");
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
-                }
-            }
-        }
-
-<<<<<<< HEAD
-=======
         public Dictionary<string, double[]> Pockets
         {
             get
@@ -272,7 +173,6 @@
             }
         }
 
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         public int Rows
         {
             get
@@ -317,7 +217,6 @@
 
         public void CreateNewPositions()
         {
-<<<<<<< HEAD
             for (int i = 1; i <= Rows; i++)
             {
                 for (int j = 1; j <= Cols; j++)
@@ -370,12 +269,6 @@
                     Positions[cur_pos][2] = Pockets["Top Right Pocket"][2];
                     Positions[cur_pos][3] = Pockets["Top Right Pocket"][3];
                 }
-=======
-            for (int i = 0; i < Rows * Cols; i++)
-            {
-                // create 0 value positions on the tray
-                Positions.Add(new double[] { 0.0, 0.0, 0.0, 0.0 });
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
             }
         }
 

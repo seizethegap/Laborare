@@ -14,19 +14,11 @@
                 <TextBlock Canvas.Left="71" TextWrapping="Wrap" Text="Air Blow On:" Canvas.Top="174"/>
                 <TextBlock Canvas.Left="71" TextWrapping="Wrap" Text="Air Blow Off:" Canvas.Top="216"/>
                 <TextBlock Canvas.Left="71" TextWrapping="Wrap" Text="ZPut (Before Vacuum Off):" Canvas.Top="253" Width="74"/>
-<<<<<<< HEAD
                 <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding VacuumOn, Mode=TwoWay}" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="88"/>
                 <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding VacuumOff, Mode=TwoWay}" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="131"/>
                 <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding AirBlowOn, Mode=TwoWay}" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="173"/>
                 <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding AirBlowOff, Mode=TwoWay}" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="215"/>
                 <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding ZPutBVO, Mode=TwoWay}" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="258"/>
-=======
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="88"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="131"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="173"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="215"/>
-                <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" Canvas.Left="174" Canvas.Top="258"/>
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 <ComboBox 
                     ItemsSource="{Binding DelayConfigurationComboBox}" SelectedValue="{Binding DelayConfig_SelectedItem, Mode=TwoWay}"
                     Canvas.Left="102" Canvas.Top="35" Width="213"/>
@@ -44,17 +36,11 @@
         <GroupBox Header="Sort Interface" HorizontalAlignment="Left" Margin="497,210,0,0" VerticalAlignment="Top" Height="202" Width="375">
             <Canvas>
                 <TextBlock Canvas.Left="22" TextWrapping="Wrap" Text="Output Location:" Canvas.Top="45"/>
-<<<<<<< HEAD
                 <ComboBox 
                     ItemsSource="{Binding SortInterfaceComboBox}" SelectedValue="{Binding SortInterface_SelectedItem, Mode=TwoWay}"
                     Canvas.Left="124" Canvas.Top="43" Width="216"/>
                 <TextBlock Canvas.Left="22" TextWrapping="Wrap" Text="Test Sort Result" Canvas.Top="88"/>
                 <TextBox Height="23" Canvas.Left="22" TextWrapping="Wrap" Text="{Binding TestSortResult, Mode=TwoWay}" Canvas.Top="109" Width="318"/>
-=======
-                <ComboBox Canvas.Left="124" Canvas.Top="43" Width="216"/>
-                <TextBlock Canvas.Left="22" TextWrapping="Wrap" Text="Test Sort Result" Canvas.Top="88"/>
-                <TextBox Height="23" Canvas.Left="22" TextWrapping="Wrap" Text="TextBox" Canvas.Top="109" Width="318"/>
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
 
             </Canvas>
         </GroupBox>

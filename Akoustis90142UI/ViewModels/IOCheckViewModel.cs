@@ -1212,17 +1212,9 @@
             Test.Start();
         }
 
-<<<<<<< HEAD
         public void StopOutputTest()
         {
             Test.Stop();
-=======
-            // restart the readinputthread with new settings
-            foreach (var board in IOBoards)
-            {
-                board.Value.ReadInputSignalService.Restart();
-            }
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         }
 
         /// <summary>

@@ -15,7 +15,6 @@
             _YPosition = 0.0;
             _ZGetPosition = 0.0;
             _ZPutPosition = 0.0;
-<<<<<<< HEAD
 
             // test values
             VacuumOn_Delay = 203;
@@ -23,8 +22,6 @@
             AirblowOn_Delay = 302;
             AirblowOff_Delay = 102;
             ZPut_Delay = 203;
-=======
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         }
 
         /// <summary>
@@ -136,7 +133,6 @@
             {
                 _ZPutPosition = value;
                 OnPropertyChanged("ZPutPosition");
-<<<<<<< HEAD
             }
         }
 
@@ -156,27 +152,6 @@
             }
         }
 
-=======
-            }
-        }
-
-        public int VacuumOn_Delay
-        {
-            get
-            {
-                return _VacuumOn_Delay;
-            }
-            set
-            {
-                if (value != _VacuumOn_Delay)
-                {
-                    _VacuumOn_Delay = value;
-                    OnPropertyChanged("VacuumOn_Delay");
-                }
-            }
-        }
-
->>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         public int VacuumOff_Delay
         {
             get
