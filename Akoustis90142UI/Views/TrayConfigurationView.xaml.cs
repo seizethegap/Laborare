@@ -27,11 +27,14 @@ namespace Akoustis90142UI.Views
             InitializeComponent();
             this.DataContext = new TrayConfigurationViewModel();
         }
+<<<<<<< HEAD
 
         private void AdvancedFineTune_btn_Click(object sender, RoutedEventArgs e)
         {
             TrayFineTuneConfigurationView FineTuneWindow = new TrayFineTuneConfigurationView();
             FineTuneWindow.Show();
         }
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
     }
 }

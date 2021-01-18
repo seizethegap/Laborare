@@ -25,8 +25,11 @@
             ReadMotorEncoderXYCommand = new ReadMotorEncoderXYCommand(this);
             ReadMotorEncoderZCommand = new ReadMotorEncoderZCommand(this);
             StopReadMotorEncoderCommand = new StopReadMotorEncoderCommand(this);
+<<<<<<< HEAD
             SaveCoordinatesCommand = new SaveCoordinatesCommand(this);
             CalculateAllCoordinatesCommand = new CalculateAllCoordinatesCommand(this);
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         }
 
         // hold the combo box value selections
@@ -297,6 +300,7 @@
             private set;
         }
 
+<<<<<<< HEAD
         public ICommand SaveCoordinatesCommand
         {
             get;
@@ -309,6 +313,8 @@
             private set;
         }
 
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         public void DisableAllMotors()
         {
             foreach (var motor in Motors)
@@ -442,6 +448,7 @@
             }
         }
 
+<<<<<<< HEAD
         public void SaveCoordinates()
         {
             _TrayTuning_CurrentTray.Pockets[_TrayTuning_SelectedPosition][0] = X_Position;
@@ -454,6 +461,8 @@
         {
             _TrayTuning_CurrentTray.CalculatePositions();
         }
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
 
         #region INotifyPropertyChanged Members
 

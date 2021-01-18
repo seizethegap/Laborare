@@ -29,9 +29,12 @@
             </TabItem>
             <TabItem Header="Taper Configuration">
                 <local:TaperConfigurationView />
+<<<<<<< HEAD
             </TabItem>
             <TabItem Header="Bowl Feeder Configuration">
                 <local:BowlFeederConfigurationView />
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
             </TabItem>
         </TabControl>
 

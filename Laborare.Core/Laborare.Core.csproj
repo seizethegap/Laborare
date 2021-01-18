@@ -58,7 +58,10 @@
     <Compile Include="Configuration\TCPConnectionConfig.cs" />
     <Compile Include="Configuration\TCPConnectionInstanceCollection.cs" />
     <Compile Include="Configuration\TCPConnectionInstanceElement.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\BowlFeeder.cs" />
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
     <Compile Include="Models\Bucket.cs" />
     <Compile Include="Models\FullIOBoard.cs" />
     <Compile Include="Models\HalfIOBoard.cs" />
@@ -76,7 +79,10 @@
     <Compile Include="Models\YMotor.cs" />
     <Compile Include="Models\ZMotor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Services\IOBoardSignalDecrypterService.cs" />
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
     <Compile Include="Services\ReadInputSignalService.cs" />
     <Compile Include="Services\CurrentMotorPositionService.cs" />
     <Compile Include="Services\IConnectionService.cs" />

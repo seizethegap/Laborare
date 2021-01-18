@@ -70,6 +70,7 @@
     <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\DisableMotorCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\MotorConfigurationCommands\EnableMotorCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\ApplyNewRowColToTraysCommand.cs" />
+<<<<<<< HEAD
     <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\CalculateAllCoordinatesCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\SaveCoordinatesCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\StopReadMotorEncoderCommand.cs" />
@@ -78,6 +79,11 @@
     <Compile Include="Commands\ViewModelCommands\TrayFineTuneConfigurationCommands\ReadCoordinatesCommand.cs" />
     <Compile Include="Commands\ViewModelCommands\TrayFineTuneConfigurationCommands\SaveCoordinatesCommand.cs" />
     <Compile Include="ViewModels\BowlFeederConfigurationViewModel.cs" />
+=======
+    <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\StopReadMotorEncoderCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\ReadMotorEncoderZCommand.cs" />
+    <Compile Include="Commands\ViewModelCommands\TrayConfigurationCommands\ReadMotorEncoderXYCommand.cs" />
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
     <Compile Include="ViewModels\SetupParametersViewModel.cs" />
     <Compile Include="ViewModels\TrayConfigurationViewModel.cs" />
     <Compile Include="ViewModels\MotorConfigurationViewModel.cs" />
@@ -120,6 +126,7 @@
     <Compile Include="Views\TrayConfigurationView.xaml.cs">
       <DependentUpon>TrayConfigurationView.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Views\TrayFineTuneConfigurationView.xaml.cs">
       <DependentUpon>TrayFineTuneConfigurationView.xaml</DependentUpon>
     </Compile>
@@ -127,6 +134,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
     <Page Include="Views\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -183,10 +192,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
     <Page Include="Views\TrayFineTuneConfigurationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

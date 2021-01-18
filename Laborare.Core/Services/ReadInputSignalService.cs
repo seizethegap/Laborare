@@ -42,6 +42,11 @@
                     _CurrentIOBoard.InputSignal_Port0 = InputSignal_Port0;
                     isSuccess = USBIOBoardService.ReadPort(_CurrentIOBoard.BoardNum, 1, ref InputSignal_Port1);
                     _CurrentIOBoard.InputSignal_Port1 = InputSignal_Port1;
+<<<<<<< HEAD
+=======
+                    // added a sleep here so that the thread won't overwhelm the usb board when parsing
+                    Thread.Sleep(Delay);
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
                 }
             }, CancelReadInputSignalThread.Token);
         }

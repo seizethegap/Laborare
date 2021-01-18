@@ -30,6 +30,7 @@
         private string _SortInterface_SelectedItem;
         private dynamic _SortInterface_CurrentItem;
 
+<<<<<<< HEAD
         // pre-saved variables
         private int _VacuumOn;
         private int _VacuumOff;
@@ -38,6 +39,8 @@
         private int _ZPutBVO;
         private string _TestSortResult;
 
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         public Dictionary<string, Tray> Trays
         {
             get
@@ -134,7 +137,10 @@
             }
         }
 
+<<<<<<< HEAD
         #region Binding variables
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         public string DelayConfig_SelectedItem
         {
             get
@@ -148,6 +154,7 @@
             }
         }
 
+<<<<<<< HEAD
         public dynamic DelayConfig_CurrentItem
         {
             get
@@ -161,6 +168,8 @@
             }
         }
 
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         public string SortInterface_SelectedItem
         {
             get
@@ -170,6 +179,7 @@
             set
             {
                 _SortInterface_SelectedItem = value;
+<<<<<<< HEAD
                 SetSortInterfaceCurrentItem();
 
             }
@@ -284,6 +294,12 @@
             }
         }
         #endregion
+=======
+
+            }
+        }
+
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         public void PopulateDelayConfigurationComboBox()
         {
             foreach (var tray in Trays)
@@ -309,14 +325,27 @@
                 SortInterfaceComboBox.Add(tray.Key);
             }
 
+<<<<<<< HEAD
             foreach (var bucket in Buckets)
             {
                 SortInterfaceComboBox.Add(bucket.Key);
             }
+=======
+            foreach (var precisor in Precisors)
+            {
+                SortInterfaceComboBox.Add(precisor.Key);
+            }
+
+            foreach (var testsocket in TestSockets)
+            {
+                SortInterfaceComboBox.Add(testsocket.Key);
+            }   
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
         }
 
         public void SetDelayConfigurationCurrentItem()
         {
+<<<<<<< HEAD
             if (DelayConfig_SelectedItem.Contains("Tray"))
             {
                 DelayConfig_CurrentItem = Trays[DelayConfig_SelectedItem];
@@ -328,11 +357,25 @@
             else if (DelayConfig_SelectedItem.Contains("Test Socket"))
             {
                 DelayConfig_CurrentItem = TestSockets[DelayConfig_SelectedItem];
+=======
+            if (_DelayConfig_SelectedItem.Contains("Tray"))
+            {
+                _DelayConfig_CurrentItem = Trays[_DelayConfig_SelectedItem];
+            }
+            else if (_DelayConfig_SelectedItem.Contains("Precisor"))
+            {
+                _DelayConfig_CurrentItem = Precisors[_DelayConfig_SelectedItem];
+            }
+            else if (_DelayConfig_SelectedItem.Contains("Test Socket"))
+            {
+                _DelayConfig_CurrentItem = TestSockets[_DelayConfig_SelectedItem];
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
             }
         }
 
         public void SetSortInterfaceCurrentItem()
         {
+<<<<<<< HEAD
             if (SortInterface_SelectedItem.Contains("Tray"))
             {
                 SortInterface_CurrentItem = Trays[SortInterface_SelectedItem];
@@ -356,6 +399,18 @@
             AirBlowOff = DelayConfig_CurrentItem.AirblowOff_Delay;
             ZPutBVO = DelayConfig_CurrentItem.ZPut_Delay;
         }
+=======
+            if (_SortInterface_SelectedItem.Contains("Tray"))
+            {
+                _SortInterface_CurrentItem = Trays[_SortInterface_SelectedItem];
+            }
+            else if (_SortInterface_SelectedItem.Contains("Bucket"))
+            {
+                _SortInterface_CurrentItem = Buckets[_SortInterface_SelectedItem];
+            }
+        }
+
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
 
         #region INotifyPropertyChanged Members
 

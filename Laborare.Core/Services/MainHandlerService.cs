@@ -77,6 +77,7 @@
 
         public static Dictionary<string, Bucket> ActiveBuckets = new Dictionary<string, Bucket>();
 
+<<<<<<< HEAD
         public static IOBoardSignalDecrypterService signalDecrypter;
 
         public static void InitializeApp()
@@ -93,6 +94,8 @@
 
             signalDecrypter = new IOBoardSignalDecrypterService(ActiveIOBoards);
         }
+=======
+>>>>>>> 20346694a5809b33e26dfeb5b6e758453bb83487
 
         // TODO: what to do with peripherals that aren't motors?
         public static void InitializeTcpDevices()
