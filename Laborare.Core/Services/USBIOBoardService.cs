@@ -20,6 +20,8 @@
         public static string[] errMsg; // last error message for the corresponding board.
         static StringBuilder tmpErrMsg = new StringBuilder(512);
 
+        public static readonly Object UsbLockObj = new Object();
+
         /* RP2005 Constructor
          * List of serial numbers passed in and parsed into StringBuilder sn and separated with commas, 
          * RP_OpenDIO will initialize all the boards in this string.
@@ -36,7 +38,6 @@
             // board names and serial numbers
             StringBuilder sn = new StringBuilder(512);
             StringBuilder desc = new StringBuilder(512);
-            MainHandlerService.ActiveIOBoards = new Dictionary<string, IIOBoard>();
 
             try
             {
@@ -80,8 +81,7 @@
                         }
                         else
                         {
-                            // custom board not yet implemented
-                            throw new IOException();
+                            MainHandlerService.ActiveIOBoards.Add(SN[i], new FullIOBoard(i, SN[i], Desc[i]));
                         }
                         
                     }
@@ -91,9 +91,6 @@
                     }
                 }
             }
-
-            // Start the ReadInputSignalThread
-            ReadInputSignalService.Start();
         }
 
 
@@ -116,7 +113,10 @@
         {
             if (brd < numDevs)
             {
-                errCode[brd] = IUSBIOBoardService.RP_ReadPort(hDIO[brd], port, ref value, tmpErrMsg);
+                lock (UsbLockObj)
+                {
+                    errCode[brd] = IUSBIOBoardService.RP_ReadPort(hDIO[brd], port, ref value, tmpErrMsg);
+                }
                 if (errCode[brd] == 0)
                 {
                     return 0;
@@ -142,7 +142,10 @@
         {
             if (brd < numDevs)
             {
-                errCode[brd] = IUSBIOBoardService.RP_WritePort(hDIO[brd], port, value, tmpErrMsg);
+                lock (UsbLockObj)
+                {
+                    errCode[brd] = IUSBIOBoardService.RP_WritePort(hDIO[brd], port, value, tmpErrMsg);
+                }
                 if (errCode[brd] == 0)
                 {
                     return 0;
@@ -162,7 +165,11 @@
         // destructor
         public static void Stop()
         {
-            ReadInputSignalService.Stop();
+            foreach (var board in MainHandlerService.ActiveIOBoards)
+            {
+                // stop thread for reading input signals for each board
+                board.Value.ReadInputSignalService.Stop();
+            }
 
             for (int i = 0; i < numDevs; i++)
             {

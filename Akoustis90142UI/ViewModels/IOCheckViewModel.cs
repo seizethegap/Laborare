@@ -29,18 +29,22 @@
                 MessageBox.Show("No IO boards detected.");
             }
 
+            Test = new TestOutputSignalsService();
             // initialize read io interval from value in mainhandlerservice
             _Read_Io_Interval = MainHandlerService.Read_Io_Interval_Setting;
 
             // initialize commands for io check
             ReloadIoBoardCommand = new ReloadIoBoardsCommand(this);
             ApplyIoBoardIntervalSettingCommand = new ApplyIoBoardIntervalSettingCommand(this);
+            StopOutputSignalTestCommand = new StopOutputSignalTestCommand(this);
 
         }
 
         private string _SelectedBoard;
         private IIOBoard _CurrentBoard;
         private string _Read_Io_Interval;
+
+        private TestOutputSignalsService Test;
 
         private int ignoreLol;
 
@@ -86,6 +90,12 @@
         }
 
         public ICommand ApplyIoBoardIntervalSettingCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand StopOutputSignalTestCommand
         {
             get;
             private set;
@@ -1199,20 +1209,12 @@
 
         public void SaveIntervalSetting()
         {
-            // make sure our value is not blank and is a number
-            if (Read_Io_Interval != null && int.TryParse(Read_Io_Interval, out ignoreLol))
-            {
-                // set the global variable in MainHandlerService to the changed value
-                MainHandlerService.Read_Io_Interval_Setting = Read_Io_Interval;
-                MessageBox.Show("Interval setting applied successfully!");
-            }
-            else 
-            {
-                MessageBox.Show("You have entered an invalid input. Must be a number.");
-            }
+            Test.Start();
+        }
 
-            // restart the readinputthread with new settings
-            ReadInputSignalService.Restart();
+        public void StopOutputTest()
+        {
+            Test.Stop();
         }
 
         /// <summary>

@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Akoustis90142UI.Views"
              mc:Ignorable="d" 
              d:DesignHeight="795" d:DesignWidth="1378">
     <Grid Background="#FFE5E5E5" Margin="0,0,-1,-2">
@@ -92,13 +91,11 @@
                 <TextBlock Canvas.Left="99" TextWrapping="Wrap" Text="{ Binding sol16_Desc, Mode=OneWay }" Canvas.Top="198"/>
             </Canvas>
         </GroupBox>
-        <TextBlock HorizontalAlignment="Left" Margin="26,29,0,0" TextWrapping="Wrap" Text="IO Check Interval (ms):" VerticalAlignment="Top" Height="34" Width="70"/>
-        <TextBox 
-            Text="{Binding Read_Io_Interval, Mode=TwoWay}"
-            HorizontalAlignment="Left" Height="23" Margin="106,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
-        <Button Content="Apply" 
-                Command="{Binding ApplyIoBoardIntervalSettingCommand}" HorizontalAlignment="Left" Margin="189,32,0,0" VerticalAlignment="Top" Width="75" Height="27"/>
+        <Button Content="Start Test" 
+                Command="{Binding ApplyIoBoardIntervalSettingCommand}" HorizontalAlignment="Left" Margin="55,32,0,0" VerticalAlignment="Top" Width="75" Height="27"/>
         <Button Content="Reload Boards" 
                 Command="{Binding ReloadIoBoardCommand}" HorizontalAlignment="Left" Margin="1123,28,0,0" VerticalAlignment="Top" Width="108" Height="35"/>
+        <Button Content="Stop Test" 
+            Command="{Binding StopOutputSignalTestCommand}" HorizontalAlignment="Left" Margin="167,32,0,0" VerticalAlignment="Top" Width="75" Height="27"/>
     </Grid>
 </UserControl>

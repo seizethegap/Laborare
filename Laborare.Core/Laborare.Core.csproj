@@ -58,12 +58,17 @@
     <Compile Include="Configuration\TCPConnectionConfig.cs" />
     <Compile Include="Configuration\TCPConnectionInstanceCollection.cs" />
     <Compile Include="Configuration\TCPConnectionInstanceElement.cs" />
+    <Compile Include="Models\BowlFeeder.cs" />
+    <Compile Include="Models\Bucket.cs" />
     <Compile Include="Models\FullIOBoard.cs" />
     <Compile Include="Models\HalfIOBoard.cs" />
     <Compile Include="Models\IAxisMotor.cs" />
     <Compile Include="Models\IIOBoard.cs" />
+    <Compile Include="Models\KeyenceCameraInspectionJob.cs" />
+    <Compile Include="Models\OmegaThermal.cs" />
     <Compile Include="Models\Precisor.cs" />
     <Compile Include="Models\RMotor.cs" />
+    <Compile Include="Models\Taper.cs" />
     <Compile Include="Models\TestSocket.cs" />
     <Compile Include="Models\Tray.cs" />
     <Compile Include="Models\Vacuum.cs" />
@@ -71,17 +76,22 @@
     <Compile Include="Models\YMotor.cs" />
     <Compile Include="Models\ZMotor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IOBoardSignalDecrypterService.cs" />
+    <Compile Include="Services\ReadInputSignalService.cs" />
     <Compile Include="Services\CurrentMotorPositionService.cs" />
     <Compile Include="Services\IConnectionService.cs" />
     <Compile Include="Services\IUSBIOBoardService.cs" />
     <Compile Include="Services\MainHandlerService.cs" />
     <Compile Include="Services\MessageDecoderService.cs" />
-    <Compile Include="Services\ReadInputSignalService.cs" />
     <Compile Include="Services\ReadVacuumGeneratorService.cs" />
     <Compile Include="Services\RS232ConnectionService.cs" />
     <Compile Include="Services\TCPConnectionService.cs" />
+    <Compile Include="Services\TestOutputSignalsService.cs" />
     <Compile Include="Services\UnitConversionService.cs" />
     <Compile Include="Services\USBIOBoardService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

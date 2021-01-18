@@ -4,17 +4,24 @@
     using System.Collections.Generic;
     using System.ComponentModel;
 
-    class Precisor : INotifyPropertyChanged
+    public class Precisor : INotifyPropertyChanged
     {
         /// <summary>
         /// Initialize an instance of the Precisor object for the first time, or reset.
         /// </summary>
         public Precisor()
         {
-            Precisor_XPosition = 0.0;
-            Precisor_YPosition = 0.0;
-            Precisor_ZGetPosition = 0.0;
-            Precisor_ZPutPosition = 0.0;
+            _XPosition = 0.0;
+            _YPosition = 0.0;
+            _ZGetPosition = 0.0;
+            _ZPutPosition = 0.0;
+
+            // test values
+            VacuumOn_Delay = 203;
+            VacuumOff_Delay = 10;
+            AirblowOn_Delay = 302;
+            AirblowOff_Delay = 102;
+            ZPut_Delay = 203;
         }
 
         /// <summary>
@@ -22,10 +29,10 @@
         /// </summary>
         public Precisor(double x_pos, double y_pos, double zget_pos, double zput_pos)
         {
-            Precisor_XPosition = x_pos;
-            Precisor_YPosition = y_pos;
-            Precisor_ZGetPosition = zget_pos;
-            Precisor_ZPutPosition = zput_pos;
+            _XPosition = x_pos;
+            _YPosition = y_pos;
+            _ZGetPosition = zget_pos;
+            _ZPutPosition = zput_pos;
         }
 
         private double _XPosition;
@@ -33,7 +40,51 @@
         private double _ZGetPosition;
         private double _ZPutPosition;
 
-        public double Precisor_XPosition
+        private int _VacuumOn_Delay, _VacuumOff_Delay, _AirblowOn_Delay, _AirblowOff_Delay, _ZPut_Delay;
+
+        private bool _EnablePrecisorBeforeTestSite, _EnablePrecisorVacuum, _EnablePrecisorBeforeOutput;
+
+        #region Binding variables
+        public bool EnablePrecisorBeforeTestSite
+        {
+            get
+            {
+                return _EnablePrecisorBeforeTestSite;
+            }
+            set
+            {
+                _EnablePrecisorBeforeTestSite = value;
+                OnPropertyChanged("EnablePrecisorBeforeTestSite");
+            }
+        }
+
+        public bool EnablePrecisorVacuum
+        {
+            get
+            {
+                return _EnablePrecisorVacuum;
+            }
+            set
+            {
+                _EnablePrecisorVacuum = value;
+                OnPropertyChanged("EnablePrecisorVacuum");
+            }
+        }
+
+        public bool EnablePrecisorBeforeOutput
+        {
+            get
+            {
+                return _EnablePrecisorBeforeOutput;
+            }
+            set
+            {
+                _EnablePrecisorBeforeOutput = value;
+                OnPropertyChanged("EnablePrecisorBeforeOutput");
+            }
+        }
+
+        public double XPosition
         {
             get
             {
@@ -42,11 +93,11 @@
             set
             {
                 _XPosition = value;
-                OnPropertyChanged("Precisor_XPosition");
+                OnPropertyChanged("XPosition");
             }
         }
 
-        public double Precisor_YPosition
+        public double YPosition
         {
             get
             {
@@ -55,11 +106,11 @@
             set
             {
                 _YPosition = value;
-                OnPropertyChanged("Precisor_YPosition");
+                OnPropertyChanged("YPosition");
             }
         }
 
-        public double Precisor_ZGetPosition
+        public double ZGetPosition
         {
             get
             {
@@ -68,11 +119,11 @@
             set
             {
                 _ZGetPosition = value;
-                OnPropertyChanged("Precisor_ZGetPosition");
+                OnPropertyChanged("ZGetPosition");
             }
         }
 
-        public double Precisor_ZPutPosition
+        public double ZPutPosition
         {
             get
             {
@@ -81,9 +132,93 @@
             set
             {
                 _ZPutPosition = value;
-                OnPropertyChanged("Precisor_ZPutPosition");
+                OnPropertyChanged("ZPutPosition");
             }
         }
+
+        public int VacuumOn_Delay
+        {
+            get
+            {
+                return _VacuumOn_Delay;
+            }
+            set
+            {
+                if (value != _VacuumOn_Delay)
+                {
+                    _VacuumOn_Delay = value;
+                    OnPropertyChanged("VacuumOn_Delay");
+                }
+            }
+        }
+
+        public int VacuumOff_Delay
+        {
+            get
+            {
+                return _VacuumOff_Delay;
+            }
+            set
+            {
+                if (value != _VacuumOff_Delay)
+                {
+                    _VacuumOff_Delay = value;
+                    OnPropertyChanged("VacuumOff_Delay");
+                }
+            }
+        }
+
+        public int AirblowOn_Delay
+        {
+            get
+            {
+                return _AirblowOn_Delay;
+            }
+            set
+            {
+                if (value != _AirblowOn_Delay)
+                {
+                    _AirblowOn_Delay = value;
+                    OnPropertyChanged("AirblowOn_Delay");
+                }
+            }
+        }
+
+        public int AirblowOff_Delay
+        {
+            get
+            {
+                return _AirblowOff_Delay;
+            }
+            set
+            {
+                if (value != _AirblowOff_Delay)
+                {
+                    _AirblowOff_Delay = value;
+                    OnPropertyChanged("AirblowOff_Delay");
+                }
+            }
+        }
+
+        public int ZPut_Delay
+        {
+            get
+            {
+                return _ZPut_Delay;
+            }
+            set
+            {
+                if (value != _ZPut_Delay)
+                {
+                    _ZPut_Delay = value;
+                    OnPropertyChanged("ZPut_Delay");
+                }
+            }
+        }
+
+       
+
+        #endregion
 
         #region INotifyPropertyChanged Members
 

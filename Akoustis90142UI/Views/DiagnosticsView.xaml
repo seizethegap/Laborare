@@ -12,8 +12,26 @@
             <TabItem Header="I/O Check">
                 <local:IOCheckView />
             </TabItem>
+            <TabItem Header="Setup Parameters">
+                <local:SetupParametersView />
+            </TabItem>
             <TabItem Header="Motor Configuration">
-                <local:MotorConfigurationView/>
+                <local:MotorConfigurationView />
+            </TabItem>
+            <TabItem Header="Tray Configuration">
+                <local:TrayConfigurationView />
+            </TabItem>
+            <TabItem Header="Precisor Configuration">
+                <local:PrecisorConfigurationView />
+            </TabItem>
+            <TabItem Header="Test Socket Configuration">
+                <local:TestSocketConfigurationView />
+            </TabItem>
+            <TabItem Header="Taper Configuration">
+                <local:TaperConfigurationView />
+            </TabItem>
+            <TabItem Header="Bowl Feeder Configuration">
+                <local:BowlFeederConfigurationView />
             </TabItem>
         </TabControl>
 

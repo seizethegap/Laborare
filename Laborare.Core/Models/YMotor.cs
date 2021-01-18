@@ -18,15 +18,13 @@
             _Connection_Service = connection_service;
             _Command_Processor = command_processor;
 
-            CheckMotorStatus();
-
-            _MessageDecoderService = new MessageDecoderService(this);
+            _CurrentMotorPositionService = new CurrentMotorPositionService(this);
         }
 
         private IAxisMotorCommandProcessor _Command_Processor;
         private IConnectionService _Connection_Service;
 
-        private MessageDecoderService _MessageDecoderService;
+        private CurrentMotorPositionService _CurrentMotorPositionService;
 
         private string _Motor_Name;
         private int _MotorId;
@@ -50,6 +48,18 @@
 
 
         #region Binding Variables to UI Element
+        public CurrentMotorPositionService CurrentMotorPositionService
+        {
+            get
+            {
+                return _CurrentMotorPositionService;
+            }
+            set
+            {
+                _CurrentMotorPositionService = value;
+            }
+        }
+
         public string Motor_Name
         {
             get { return _Motor_Name; }
@@ -220,7 +230,7 @@
             if (recieved.Contains(Command_Processor.MOTOR_POSITION_MESSAGE(_MotorId)))
             {
                 string[] splitMsg = recieved.Split('=');
-                Position = Convert.ToDouble(splitMsg[1]) / Resolution;
+                Position = Convert.ToDouble(splitMsg[1]);
             }
         }
 

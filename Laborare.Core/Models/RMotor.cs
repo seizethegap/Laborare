@@ -18,6 +18,7 @@
             _Command_Processor = command_processor;
             _MotorStatus = "N/A";
 
+            _CurrentMotorPositionService = new CurrentMotorPositionService(this);
 
         }
 
@@ -25,6 +26,8 @@
         private IConnectionService _Connection_Service;
         private IAxisMotorCommandProcessor _Command_Processor;
         private string _MotorName;
+
+        private CurrentMotorPositionService _CurrentMotorPositionService;
 
         private int _MotorId;
 
@@ -74,6 +77,19 @@
                 _Command_Processor = value;
             }
         }
+
+        public CurrentMotorPositionService CurrentMotorPositionService
+        {
+            get
+            {
+                return _CurrentMotorPositionService;
+            }
+            set
+            {
+                _CurrentMotorPositionService = value;
+            }
+        }
+
 
         public string MotorStatus
         {

@@ -5,12 +5,22 @@
     using System.Threading;
     using System.Collections.Generic;
 
-    public static class ReadInputSignalService
-    {
-        public static CancellationTokenSource CancelReadInputSignalThread;
-        public static byte InputSignal_Port0, InputSignal_Port1;
+    using Laborare.Core.Models;
 
-        public static int Delay;
+    public class ReadInputSignalService
+    {
+        public CancellationTokenSource CancelReadInputSignalThread;
+        public byte InputSignal_Port0, InputSignal_Port1;
+
+        public int Delay;
+
+        private IIOBoard _CurrentIOBoard;
+
+        public ReadInputSignalService(IIOBoard io_board)
+        {
+            _CurrentIOBoard = io_board;
+            Start();
+        }
 
         /// <summary>
         /// This thread is responsible for constantly updating our IOBoard Models with the correct 
@@ -18,7 +28,7 @@
         /// detecting all of our boards and populating the dictionary which holds the active Io boards.
         /// Use the Stop function in the RP2005 destructor before it closes connection to the boards.
         /// </summary>
-        public static void Start()
+        public void Start()
         {
             CancelReadInputSignalThread = new CancellationTokenSource();
 
@@ -28,26 +38,21 @@
             {
                 while (!CancelReadInputSignalThread.Token.IsCancellationRequested)
                 {
-                    foreach (var board in MainHandlerService.ActiveIOBoards)
-                    {
-                        uint isSuccess = USBIOBoardService.ReadPort(board.Value.BoardNum, 0, ref InputSignal_Port0);
-                        board.Value.InputSignal_Port0 = InputSignal_Port0;
-                        isSuccess = USBIOBoardService.ReadPort(board.Value.BoardNum, 1, ref InputSignal_Port1);
-                        board.Value.InputSignal_Port1 = InputSignal_Port1;
-                    }
-                    // added a sleep here so that the thread won't overwhelm the usb board when parsing
-                    Thread.Sleep(Delay);
+                    uint isSuccess = USBIOBoardService.ReadPort(_CurrentIOBoard.BoardNum, 0, ref InputSignal_Port0);
+                    _CurrentIOBoard.InputSignal_Port0 = InputSignal_Port0;
+                    isSuccess = USBIOBoardService.ReadPort(_CurrentIOBoard.BoardNum, 1, ref InputSignal_Port1);
+                    _CurrentIOBoard.InputSignal_Port1 = InputSignal_Port1;
                 }
             }, CancelReadInputSignalThread.Token);
         }
 
-        public static void Stop()
+        public void Stop()
         {
             CancelReadInputSignalThread.Cancel();
             CancelReadInputSignalThread.Dispose();
         }
 
-        public static void Restart()
+        public void Restart()
         {
             Stop();
             // give the token some time to completely cancel and dispose before restarting the thread

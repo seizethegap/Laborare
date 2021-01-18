@@ -2,17 +2,17 @@
 {
     using System.ComponentModel;
 
-    class TestSocket : INotifyPropertyChanged
+    public class TestSocket : INotifyPropertyChanged
     {
         /// <summary>
         /// Initialize an instance of the TestSocket class for the first time.
         /// </summary>
         public TestSocket()
         {
-            TS_XPosition = 0.0;
-            TS_YPosition = 0.0; // usually we don't need to get y position for test socket but just for consistency sake
-            TS_ZGetPosition = 0.0;
-            TS_ZPutPosition = 0.0;
+            XPosition = 0.0;
+            YPosition = 0.0; // usually we don't need to get y position for test socket but just for consistency sake
+            ZGetPosition = 0.0;
+            ZPutPosition = 0.0;
         }
 
         /// <summary>
@@ -20,9 +20,9 @@
         /// </summary>
         public TestSocket(double x_pos, double zget_pos, double zput_pos)
         {
-            TS_XPosition = x_pos;
-            TS_ZGetPosition = zget_pos;
-            TS_ZPutPosition = zput_pos;
+            XPosition = x_pos;
+            ZGetPosition = zget_pos;
+            ZPutPosition = zput_pos;
         }
 
         // Variables for Test Socket class
@@ -31,8 +31,44 @@
         private double _ZGetPosition; // this is where z motor will move to in order to get the device from socket
         private double _ZPutPosition; // this is where z motor will move to in order to put the device into socket
 
+        private int _VacuumOn_Delay, _VacuumOff_Delay, _AirblowOn_Delay, _AirblowOff_Delay, _ZPut_Delay;
+
+        private bool _EnableFreeFallDrop, _EnableDoublePlunge;
+
         #region Binding variables
-        public double TS_XPosition
+        public bool EnableFreeFallDrop
+        {
+            get
+            {
+                return _EnableFreeFallDrop;
+            }
+            set
+            {
+                if (value != _EnableFreeFallDrop)
+                {
+                    _EnableFreeFallDrop = value;
+                    OnPropertyChanged("EnableFreeFallDrop");
+                }
+            }
+        }
+
+        public bool EnableDoublePlunge
+        {
+            get
+            {
+                return _EnableDoublePlunge;
+            }
+            set
+            {
+                if (value != _EnableDoublePlunge)
+                {
+                    _EnableDoublePlunge = value;
+                    OnPropertyChanged("EnableDoublePlunge");
+                }
+            }
+        }
+
+        public double XPosition
         {
             get
             {
@@ -41,11 +77,11 @@
             set
             {
                 _XPosition = value;
-                OnPropertyChanged("TS_XPosition");
+                OnPropertyChanged("XPosition");
             }
         }
 
-        public double TS_YPosition
+        public double YPosition
         {
             get
             {
@@ -54,11 +90,11 @@
             set
             {
                 _YPosition = value;
-                OnPropertyChanged("TS_YPosition");
+                OnPropertyChanged("YPosition");
             }
         }
 
-        public double TS_ZGetPosition
+        public double ZGetPosition
         {
             get
             {
@@ -67,11 +103,11 @@
             set
             {
                 _ZGetPosition = value;
-                OnPropertyChanged("TS_ZGetPosition");
+                OnPropertyChanged("ZGetPosition");
             }
         }
 
-        public double TS_ZPutPosition
+        public double ZPutPosition
         {
             get
             {
@@ -80,7 +116,87 @@
             set
             {
                 _ZPutPosition = value;
-                OnPropertyChanged("TS_ZPutPosition");
+                OnPropertyChanged("ZPutPosition");
+            }
+        }
+
+        public int VacuumOn_Delay
+        {
+            get
+            {
+                return _VacuumOn_Delay;
+            }
+            set
+            {
+                if (value != _VacuumOn_Delay)
+                {
+                    _VacuumOn_Delay = value;
+                    OnPropertyChanged("VacuumOn_Delay");
+                }
+            }
+        }
+
+        public int VacuumOff_Delay
+        {
+            get
+            {
+                return _VacuumOff_Delay;
+            }
+            set
+            {
+                if (value != _VacuumOff_Delay)
+                {
+                    _VacuumOff_Delay = value;
+                    OnPropertyChanged("VacuumOff_Delay");
+                }
+            }
+        }
+
+        public int AirblowOn_Delay
+        {
+            get
+            {
+                return _AirblowOn_Delay;
+            }
+            set
+            {
+                if (value != _AirblowOn_Delay)
+                {
+                    _AirblowOn_Delay = value;
+                    OnPropertyChanged("AirblowOn_Delay");
+                }
+            }
+        }
+
+        public int AirblowOff_Delay
+        {
+            get
+            {
+                return _AirblowOff_Delay;
+            }
+            set
+            {
+                if (value != _AirblowOff_Delay)
+                {
+                    _AirblowOff_Delay = value;
+                    OnPropertyChanged("AirblowOff_Delay");
+                }
+            }
+        }
+
+        public int ZPut_Delay
+        {
+            get
+            {
+                return _ZPut_Delay;
+            }
+            set
+            {
+                if (value != _ZPut_Delay)
+                {
+                    _ZPut_Delay = value;
+                    OnPropertyChanged("ZPut_Delay");
+                }
             }
         }
         #endregion

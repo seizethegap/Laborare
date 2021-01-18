@@ -12,7 +12,11 @@
             BoardNum = boardNum;
             SerialNumber = serial_number;
             ModelName = model_name;
+
+            _ReadInputSignalService = new ReadInputSignalService(this);
         }
+
+        private ReadInputSignalService _ReadInputSignalService;
 
         private byte _InputSignal_Port0;
         private byte _InputSignal_Port1;
@@ -35,6 +39,14 @@
         public string SerialNumber { get; set; }
 
         public string ModelName { get; set; }
+
+        public ReadInputSignalService ReadInputSignalService
+        {
+            get
+            {
+                return _ReadInputSignalService;
+            }
+        }
 
         public byte InputSignal_Port0
         {
